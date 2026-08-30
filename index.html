@@ -3,145 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tienda e-commerce de productos de tecnología">
-    <title>TechShop - Tienda Online</title>
+    <meta name="description" content="Tienda online de ropa deportiva femenina de Micaela Antonelli">
+    <title>Micaela Antonelli - Ropa deportiva femenina</title>
 </head>
 <body>
 
     <header>
-        <div class="encabezado">
-            <a href="index.html">
-                <img src="img/logo.png" alt="Logo de TechShop">
-                <span>TechShop</span>
-            </a>
+        <a href="index.html">
+            <img src="img/logo.png" alt="Logo de Micaela Antonelli">
+            <span>Micaela Antonelli</span>
+        </a>
 
-            <nav aria-label="Navegación principal">
-                <ul>
-                    <li><a href="#catalogo">Catálogo</a></li>
-                    <li><a href="#ofertas">Ofertas</a></li>
-                    <li><a href="#mas-vendidos">Más vendidos</a></li>
-                    <li><a href="#medios-de-pago">Medios de pago</a></li>
-                    <li><a href="#beneficios">Beneficios</a></li>
-                </ul>
-            </nav>
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="#calzas">Calzas</a></li>
+                <li><a href="#tops">Tops</a></li>
+                <li><a href="#zapatillas">Zapatillas</a></li>
+                <li><a href="#medios-de-pago">Medios de pago</a></li>
+                <li><a href="#beneficios">Beneficios</a></li>
+            </ul>
+        </nav>
 
-            <form action="#" method="get" role="search">
-                <label class="sr-only" for="buscar">Buscar productos</label>
-                <input type="search" id="buscar" name="q" placeholder="Buscar productos...">
-                <button type="submit">Buscar</button>
-            </form>
-        </div>
+        <form action="#" method="get" role="search">
+            <label for="buscar">Buscar productos</label>
+            <input type="search" id="buscar" name="q" placeholder="Buscar prendas deportivas...">
+            <button type="submit">Buscar</button>
+        </form>
     </header>
 
     <main>
-        <section id="carrito" aria-label="Carrito de compras">
-            <h2>Tu carrito</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Producto</th>
-                        <th>Precio</th>
-                        <th>Cantidad</th>
-                        <th>Subtotal</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Parlante Bluetooth</td>
-                        <td>$35.000</td>
-                        <td>1</td>
-                        <td>$35.000</td>
-                    </tr>
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td colspan="3">Total</td>
-                        <td>$35.000</td>
-                    </tr>
-                </tfoot>
-            </table>
-            <button type="button">Finalizar compra</button>
-        </section>
-
         <section id="catalogo" aria-labelledby="titulo-catalogo">
-            <h2 id="titulo-catalogo">Catálogo de productos</h2>
-            <div class="grilla-productos">
-                <article>
-                    <img src="img/auriculares.jpg" alt="Auriculares inalámbricos">
-                    <h3>Auriculares Inalámbricos</h3>
-                    <p>Sonido envolvente con cancelación de ruido.</p>
-                    <strong>$45.000</strong>
-                    <button type="button">Agregar al carrito</button>
-                </article>
+            <h1 id="titulo-catalogo">Catálogo de ropa deportiva femenina</h1>
+            <p>Calzas, tops y zapatillas diseñadas para acompañar cada entrenamiento. Hacé clic en "Ver detalle" para ver la ficha completa de cada producto.</p>
 
-                <article>
-                    <img src="img/reloj.jpg" alt="Smartwatch deportivo">
-                    <h3>Smartwatch Deportivo</h3>
-                    <p>Monitoreo de actividad y ritmo cardíaco.</p>
-                    <strong>$80.000</strong>
-                    <button type="button">Agregar al carrito</button>
-                </article>
+            <h2 id="calzas">Calzas</h2>
+            <article>
+                <img src="img/calza-compresion.jpg" alt="Calza deportiva de compresión">
+                <h3>Calza Deportiva de Compresión</h3>
+                <p>Cintura alta, tejido compresivo y costuras planas.</p>
+                <strong>$38.000</strong>
+                <p><a href="producto.html">Ver detalle</a></p>
+            </article>
 
-                <article>
-                    <img src="img/teclado.jpg" alt="Teclado mecánico">
-                    <h3>Teclado Mecánico RGB</h3>
-                    <p>Switch red, ideal para gaming y oficina.</p>
-                    <strong>$55.000</strong>
-                    <button type="button">Agregar al carrito</button>
-                </article>
-            </div>
-        </section>
+            <article>
+                <img src="img/calza-34.jpg" alt="Calza deportiva tres cuartos">
+                <h3>Calza Deportiva 3/4</h3>
+                <p>Corte al tobillo, ideal para entrenamientos de fuerza.</p>
+                <strong>$32.000</strong>
+                <p><a href="producto.html">Ver detalle</a></p>
+            </article>
 
-        <section id="ofertas" aria-labelledby="titulo-ofertas">
-            <h2 id="titulo-ofertas">Productos en oferta</h2>
-            <div class="grilla-productos">
-                <article>
-                    <img src="img/mouse.jpg" alt="Mouse gamer">
-                    <h3>Mouse Gamer</h3>
-                    <p>3200 DPI, botones programables.</p>
-                    <del>$25.000</del>
-                    <strong>$18.000</strong>
-                    <button type="button">Agregar al carrito</button>
-                </article>
+            <article>
+                <img src="img/biker-corta.jpg" alt="Biker corta deportiva">
+                <h3>Biker Corta con Bolsillo</h3>
+                <p>Largo a la rodilla, bolsillo para el celular y tiro alto.</p>
+                <strong>$28.000</strong>
+                <p><a href="producto.html">Ver detalle</a></p>
+            </article>
 
-                <article>
-                    <img src="img/camara.jpg" alt="Cámara web Full HD">
-                    <h3>Cámara Web Full HD</h3>
-                    <p>Ideal para videollamadas y streaming.</p>
-                    <del>$40.000</del>
-                    <strong>$28.000</strong>
-                    <button type="button">Agregar al carrito</button>
-                </article>
-            </div>
-        </section>
+            <h2 id="tops">Tops</h2>
+            <article>
+                <img src="img/top-deportivo.jpg" alt="Top deportivo de sujeción">
+                <h3>Top Deportivo de Sujeción Media</h3>
+                <p>Ideal para yoga, pilates y cardio de bajo impacto.</p>
+                <strong>$25.000</strong>
+                <p><a href="producto.html">Ver detalle</a></p>
+            </article>
 
-        <section id="mas-vendidos" aria-labelledby="titulo-mas-vendidos">
-            <h2 id="titulo-mas-vendidos">Los más vendidos</h2>
-            <div class="grilla-productos">
-                <article>
-                    <img src="img/cargador.jpg" alt="Cargador rápido USB-C">
-                    <h3>Cargador Rápido USB-C</h3>
-                    <p>Carga hasta 65W con cable incluido.</p>
-                    <strong>$22.000</strong>
-                    <button type="button">Agregar al carrito</button>
-                </article>
+            <article>
+                <img src="img/remera-dryfit.jpg" alt="Remera dry fit de entrenamiento">
+                <h3>Remera Dry Fit de Entrenamiento</h3>
+                <p>Tejido que absorbe el sudor y secado rápido.</p>
+                <strong>$22.000</strong>
+                <p><a href="producto.html">Ver detalle</a></p>
+            </article>
 
-                <article>
-                    <img src="img/monitor.jpg" alt="Monitor 24 pulgadas">
-                    <h3>Monitor 24" Full HD</h3>
-                    <p>Panel IPS con 75Hz de refresco.</p>
-                    <strong>$210.000</strong>
-                    <button type="button">Agregar al carrito</button>
-                </article>
+            <h2 id="zapatillas">Zapatillas</h2>
+            <article>
+                <img src="img/zapatillas-running.jpg" alt="Zapatillas running livianas">
+                <h3>Zapatillas Running Livianas</h3>
+                <p>Amortiguación suave para carreras de distancia.</p>
+                <strong>$120.000</strong>
+                <p><a href="producto.html">Ver detalle</a></p>
+            </article>
 
-                <article>
-                    <img src="img/tablet.jpg" alt="Tablet 10 pulgadas">
-                    <h3>Tablet 10"</h3>
-                    <p>128GB de almacenamiento, ideal para estudio.</p>
-                    <strong>$190.000</strong>
-                    <button type="button">Agregar al carrito</button>
-                </article>
-            </div>
+            <article>
+                <img src="img/zapatillas-entrenamiento.jpg" alt="Zapatillas de entrenamiento">
+                <h3>Zapatillas de Entrenamiento</h3>
+                <p>Soporte lateral para crossfit y trabajos de fuerza.</p>
+                <strong>$135.000</strong>
+                <p><a href="producto.html">Ver detalle</a></p>
+            </article>
         </section>
 
         <section id="medios-de-pago" aria-labelledby="titulo-medios-de-pago">
@@ -157,21 +110,22 @@
 
         <section id="beneficios" aria-labelledby="titulo-beneficios">
             <h2 id="titulo-beneficios">Fidelización y beneficios</h2>
-            <p>Sumá puntos con cada compra y canjealos por descuentos y productos exclusivos.</p>
+            <p>Sumá puntos con cada compra y canjealos por descuentos y accesorios deportivos exclusivos.</p>
             <ul>
                 <li>1 punto por cada $1000 de compra</li>
                 <li>Envío gratis a partir de los $80.000</li>
-                <li>Acceso anticipado a ofertas exclusivas</li>
+                <li>Acceso anticipado a lanzamientos y ofertas exclusivas</li>
+                <li>Rutina de entrenamiento gratis con cada calza</li>
             </ul>
             <button type="button">Sumarme al club de beneficios</button>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 TechShop. Todos los derechos reservados.</p>
+        <p>&copy; 2026 Micaela Antonelli. Todos los derechos reservados.</p>
         <nav aria-label="Navegación del pie de página">
             <ul>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
                 <li><a href="#">Términos y condiciones</a></li>
                 <li><a href="#">Política de privacidad</a></li>
                 <li><a href="#">Redes sociales</a></li>
@@ -180,4 +134,4 @@
     </footer>
 
 </body>
-</html>
+</html> 
