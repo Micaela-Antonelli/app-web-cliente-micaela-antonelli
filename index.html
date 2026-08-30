@@ -3,31 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tienda e-commerce de productos de tecnología">
-    <title>TechShop - Tienda Online</title>
+    <meta name="description" content="LunaFit es una tienda de ropa deportiva femenina con calzas, tops, zapatillas y accesorios para entrenar con estilo.">
+    <title>LunaFit - Ropa deportiva femenina</title>
 </head>
 <body>
 
     <header>
         <div class="encabezado">
             <a href="index.html">
-                <img src="img/logo.png" alt="Logo de TechShop">
-                <span>TechShop</span>
+                <img src="img/logo.png" alt="Logo de LunaFit">
+                <span>LunaFit</span>
             </a>
 
             <nav aria-label="Navegación principal">
                 <ul>
-                    <li><a href="#catalogo">Catálogo</a></li>
+                    <li><a href="#catalogo">Colección</a></li>
+                    <li><a href="#calzas">Calzas</a></li>
+                    <li><a href="#tops">Tops</a></li>
+                    <li><a href="#zapatillas">Zapatillas</a></li>
                     <li><a href="#ofertas">Ofertas</a></li>
-                    <li><a href="#mas-vendidos">Más vendidos</a></li>
-                    <li><a href="#medios-de-pago">Medios de pago</a></li>
                     <li><a href="#beneficios">Beneficios</a></li>
                 </ul>
             </nav>
 
             <form action="#" method="get" role="search">
-                <label class="sr-only" for="buscar">Buscar productos</label>
-                <input type="search" id="buscar" name="q" placeholder="Buscar productos...">
+                <label class="sr-only" for="buscar">Buscar prendas</label>
+                <input type="search" id="buscar" name="q" placeholder="Buscar prendas...">
                 <button type="submit">Buscar</button>
             </form>
         </div>
@@ -35,7 +36,7 @@
 
     <main>
         <section id="carrito" aria-label="Carrito de compras">
-            <h2>Tu carrito</h2>
+            <h2>Tu carrito de entrenamiento</h2>
             <table>
                 <thead>
                     <tr>
@@ -47,16 +48,16 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Parlante Bluetooth</td>
-                        <td>$35.000</td>
+                        <td>Calza Power Flex</td>
+                        <td>$18.500</td>
                         <td>1</td>
-                        <td>$35.000</td>
+                        <td>$18.500</td>
                     </tr>
                 </tbody>
                 <tfoot>
                     <tr>
                         <td colspan="3">Total</td>
-                        <td>$35.000</td>
+                        <td>$18.500</td>
                     </tr>
                 </tfoot>
             </table>
@@ -64,117 +65,117 @@
         </section>
 
         <section id="catalogo" aria-labelledby="titulo-catalogo">
-            <h2 id="titulo-catalogo">Catálogo de productos</h2>
+            <h2 id="titulo-catalogo">Colección femenina para mover el cuerpo</h2>
             <div class="grilla-productos">
-                <article>
-                    <img src="img/auriculares.jpg" alt="Auriculares inalámbricos">
-                    <h3>Auriculares Inalámbricos</h3>
-                    <p>Sonido envolvente con cancelación de ruido.</p>
-                    <strong>$45.000</strong>
+                <article id="calzas">
+                    <img src="img/auriculares.jpg" alt="Calza deportiva femenina">
+                    <h3>Calza Power Flex</h3>
+                    <p>Compresión ligera, gran sensación de libertad y soporte durante cada entrenamiento.</p>
+                    <strong>$18.500</strong>
                     <button type="button">Agregar al carrito</button>
                 </article>
 
-                <article>
-                    <img src="img/reloj.jpg" alt="Smartwatch deportivo">
-                    <h3>Smartwatch Deportivo</h3>
-                    <p>Monitoreo de actividad y ritmo cardíaco.</p>
-                    <strong>$80.000</strong>
+                <article id="tops">
+                    <img src="img/reloj.jpg" alt="Top deportivo femenino">
+                    <h3>Top Training Supreme</h3>
+                    <p>Microtejido transpirables con corte favorecedor y gran comodidad.</p>
+                    <strong>$14.900</strong>
                     <button type="button">Agregar al carrito</button>
                 </article>
 
-                <article>
-                    <img src="img/teclado.jpg" alt="Teclado mecánico">
-                    <h3>Teclado Mecánico RGB</h3>
-                    <p>Switch red, ideal para gaming y oficina.</p>
-                    <strong>$55.000</strong>
+                <article id="zapatillas">
+                    <img src="img/teclado.jpg" alt="Zapatillas para entrenamiento femenino">
+                    <h3>Zapatillas Run Flex</h3>
+                    <p>Amortiguación suave, tracción confiable y estilo urbano para entrenar.</p>
+                    <strong>$39.900</strong>
                     <button type="button">Agregar al carrito</button>
                 </article>
             </div>
         </section>
 
         <section id="ofertas" aria-labelledby="titulo-ofertas">
-            <h2 id="titulo-ofertas">Productos en oferta</h2>
+            <h2 id="titulo-ofertas">Ofertas destacadas</h2>
             <div class="grilla-productos">
                 <article>
-                    <img src="img/mouse.jpg" alt="Mouse gamer">
-                    <h3>Mouse Gamer</h3>
-                    <p>3200 DPI, botones programables.</p>
-                    <del>$25.000</del>
-                    <strong>$18.000</strong>
+                    <img src="img/mouse.jpg" alt="Short deportivo femenino">
+                    <h3>Short Active Motion</h3>
+                    <p>Ideal para caminar, correr o entrenar con máxima libertad.</p>
+                    <del>$16.000</del>
+                    <strong>$12.800</strong>
                     <button type="button">Agregar al carrito</button>
                 </article>
 
                 <article>
-                    <img src="img/camara.jpg" alt="Cámara web Full HD">
-                    <h3>Cámara Web Full HD</h3>
-                    <p>Ideal para videollamadas y streaming.</p>
-                    <del>$40.000</del>
-                    <strong>$28.000</strong>
+                    <img src="img/camara.jpg" alt="Brazalete deportivo femenino">
+                    <h3>Brazalete Sweat Pro</h3>
+                    <p>Accesorio funcional para todas tus sesiones de entrenamiento.</p>
+                    <del>$9.500</del>
+                    <strong>$7.200</strong>
                     <button type="button">Agregar al carrito</button>
                 </article>
             </div>
         </section>
 
         <section id="mas-vendidos" aria-labelledby="titulo-mas-vendidos">
-            <h2 id="titulo-mas-vendidos">Los más vendidos</h2>
+            <h2 id="titulo-mas-vendidos">Lo más elegido por la comunidad</h2>
             <div class="grilla-productos">
                 <article>
-                    <img src="img/cargador.jpg" alt="Cargador rápido USB-C">
-                    <h3>Cargador Rápido USB-C</h3>
-                    <p>Carga hasta 65W con cable incluido.</p>
-                    <strong>$22.000</strong>
+                    <img src="img/cargador.jpg" alt="Remera deportiva femenina">
+                    <h3>Remera Performance</h3>
+                    <p>Tejido liviano y ultra transpirable para entrenar con estilo.</p>
+                    <strong>$13.200</strong>
                     <button type="button">Agregar al carrito</button>
                 </article>
 
                 <article>
-                    <img src="img/monitor.jpg" alt="Monitor 24 pulgadas">
-                    <h3>Monitor 24" Full HD</h3>
-                    <p>Panel IPS con 75Hz de refresco.</p>
-                    <strong>$210.000</strong>
+                    <img src="img/monitor.jpg" alt="Legging premium para entrenamiento femenino">
+                    <h3>Legging Studio Fit</h3>
+                    <p>Alta elasticidad, soporte y elegancia para cada movimiento.</p>
+                    <strong>$21.900</strong>
                     <button type="button">Agregar al carrito</button>
                 </article>
 
                 <article>
-                    <img src="img/tablet.jpg" alt="Tablet 10 pulgadas">
-                    <h3>Tablet 10"</h3>
-                    <p>128GB de almacenamiento, ideal para estudio.</p>
-                    <strong>$190.000</strong>
+                    <img src="img/tablet.jpg" alt="Zapatillas de alta performance femenina">
+                    <h3>Performance Runner</h3>
+                    <p>Diseño pensado para recorridos largos, intensidad y estilo.</p>
+                    <strong>$44.500</strong>
                     <button type="button">Agregar al carrito</button>
                 </article>
             </div>
         </section>
 
         <section id="medios-de-pago" aria-labelledby="titulo-medios-de-pago">
-            <h2 id="titulo-medios-de-pago">Medios de pago y descuentos</h2>
+            <h2 id="titulo-medios-de-pago">Medios de pago y promociones</h2>
             <ul>
                 <li>Tarjetas de crédito y débito (Visa, Mastercard, American Express)</li>
                 <li>Transferencia bancaria</li>
                 <li>Mercado Pago</li>
-                <li>Efectivo en punto de retiro</li>
+                <li>Cuotas sin interés en compras seleccionadas</li>
             </ul>
-            <p><strong>Descuentos:</strong> 10% de descuento pagando con tarjeta del Banco Nación.</p>
+            <p><strong>Promoción:</strong> 10% off abonando con tarjeta de crédito en compras superiores a $30.000.</p>
         </section>
 
         <section id="beneficios" aria-labelledby="titulo-beneficios">
-            <h2 id="titulo-beneficios">Fidelización y beneficios</h2>
-            <p>Sumá puntos con cada compra y canjealos por descuentos y productos exclusivos.</p>
+            <h2 id="titulo-beneficios">Club LunaFit</h2>
+            <p>Sumá puntos con cada compra y accedé a descuentos exclusivos y lanzamientos anticipados.</p>
             <ul>
-                <li>1 punto por cada $1000 de compra</li>
-                <li>Envío gratis a partir de los $80.000</li>
-                <li>Acceso anticipado a ofertas exclusivas</li>
+                <li>1 punto por cada $1000 gastado</li>
+                <li>Envío gratis a partir de $45.000</li>
+                <li>Acceso anticipado a nuevas colecciones</li>
             </ul>
-            <button type="button">Sumarme al club de beneficios</button>
+            <button type="button">Sumarme al club</button>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 TechShop. Todos los derechos reservados.</p>
+        <p>&copy; 2026 LunaFit. Todos los derechos reservados.</p>
         <nav aria-label="Navegación del pie de página">
             <ul>
                 <li><a href="#">Contacto</a></li>
                 <li><a href="#">Términos y condiciones</a></li>
                 <li><a href="#">Política de privacidad</a></li>
-                <li><a href="#">Redes sociales</a></li>
+                <li><a href="#">Instagram</a></li>
             </ul>
         </nav>
     </footer>
