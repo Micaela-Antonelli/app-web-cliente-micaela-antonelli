@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="LunaFit es una tienda de ropa deportiva femenina con calzas, tops, zapatillas y accesorios para entrenar con estilo.">
     <title>LunaFit - Ropa deportiva femenina</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
         <div class="encabezado">
             <a href="index.html">
-                <img src="img/logo.png" alt="Logo de LunaFit">
+                <img src="img/logo.svg" alt="Logo de LunaFit">
                 <span>LunaFit</span>
             </a>
 
@@ -34,53 +35,15 @@
         </div>
     </header>
 
-    <section id="acceso" aria-labelledby="titulo-acceso">
-        <h2 id="titulo-acceso">Acceso de clientes</h2>
-        <form action="#" method="post">
-            <label for="acceso-email">Correo electrónico</label>
-            <input type="email" id="acceso-email" name="email" required>
-            <label for="acceso-contrasena">Contraseña</label>
-            <input type="password" id="acceso-contrasena" name="contrasena" required>
-            <button type="submit">Ingresar</button>
-        </form>
-    </section>
-
     <main>
-        <section id="carrito" aria-label="Carrito de compras">
-            <h2>Tu carrito de entrenamiento</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Producto</th>
-                        <th>Precio</th>
-                        <th>Cantidad</th>
-                        <th>Subtotal</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Calza Power Flex</td>
-                        <td>$18.500</td>
-                        <td>1</td>
-                        <td>$18.500</td>
-                    </tr>
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td colspan="3">Total</td>
-                        <td>$18.500</td>
-                    </tr>
-                </tfoot>
-            </table>
-            <button type="button">Finalizar compra</button>
-        </section>
 
         <section id="catalogo" aria-labelledby="titulo-catalogo">
-            <h2 id="titulo-catalogo">Colección femenina para mover el cuerpo</h2>
+            <h1 id="titulo-catalogo">Colección femenina para mover el cuerpo</h1>
+            <p class="intro">Calzas, tops, zapatillas y accesorios diseñados para que entrenes con libertad, comodidad y estilo.</p>
             <div class="grilla-productos">
                 <article id="calzas">
                     <a href="producto.html#calza-power-flex">
-                        <img src="img/auriculares.jpg" alt="Calza deportiva femenina">
+                        <img src="img/calza-power-flex.svg" alt="Calza deportiva femenina Power Flex">
                     </a>
                     <h3><a href="producto.html#calza-power-flex">Calza Power Flex</a></h3>
                     <p>Compresión ligera, gran sensación de libertad y soporte durante cada entrenamiento.</p>
@@ -90,17 +53,17 @@
 
                 <article id="tops">
                     <a href="producto.html#top-training-supreme">
-                        <img src="img/reloj.jpg" alt="Top deportivo femenino">
+                        <img src="img/top-training-supreme.svg" alt="Top deportivo femenino Training Supreme">
                     </a>
                     <h3><a href="producto.html#top-training-supreme">Top Training Supreme</a></h3>
-                    <p>Microtejido transpirables con corte favorecedor y gran comodidad.</p>
+                    <p>Microtejido transpirable con corte favorecedor y gran comodidad.</p>
                     <strong>$14.900</strong>
                     <button type="button">Agregar al carrito</button>
                 </article>
 
                 <article id="zapatillas">
                     <a href="producto.html#zapatillas-run-flex">
-                        <img src="img/teclado.jpg" alt="Zapatillas para entrenamiento femenino">
+                        <img src="img/zapatillas-run-flex.svg" alt="Zapatillas para entrenamiento femenino Run Flex">
                     </a>
                     <h3><a href="producto.html#zapatillas-run-flex">Zapatillas Run Flex</a></h3>
                     <p>Amortiguación suave, tracción confiable y estilo urbano para entrenar.</p>
@@ -115,23 +78,21 @@
             <div class="grilla-productos">
                 <article>
                     <a href="producto.html#short-active-motion">
-                        <img src="img/mouse.jpg" alt="Short deportivo femenino">
+                        <img src="img/short-active-motion.svg" alt="Short deportivo femenino Active Motion">
                     </a>
                     <h3><a href="producto.html#short-active-motion">Short Active Motion</a></h3>
                     <p>Ideal para caminar, correr o entrenar con máxima libertad.</p>
-                    <del>$16.000</del>
-                    <strong>$12.800</strong>
+                    <del>$16.000</del> <strong>$12.800</strong>
                     <button type="button">Agregar al carrito</button>
                 </article>
 
                 <article>
                     <a href="producto.html#brazalete-sweat-pro">
-                        <img src="img/camara.jpg" alt="Brazalete deportivo femenino">
+                        <img src="img/brazalete-sweat-pro.svg" alt="Brazalete deportivo femenino Sweat Pro">
                     </a>
                     <h3><a href="producto.html#brazalete-sweat-pro">Brazalete Sweat Pro</a></h3>
                     <p>Accesorio funcional para todas tus sesiones de entrenamiento.</p>
-                    <del>$9.500</del>
-                    <strong>$7.200</strong>
+                    <del>$9.500</del> <strong>$7.200</strong>
                     <button type="button">Agregar al carrito</button>
                 </article>
             </div>
@@ -142,7 +103,7 @@
             <div class="grilla-productos">
                 <article>
                     <a href="producto.html#remera-performance">
-                        <img src="img/cargador.jpg" alt="Remera deportiva femenina">
+                        <img src="img/remera-performance.svg" alt="Remera deportiva femenina Performance">
                     </a>
                     <h3><a href="producto.html#remera-performance">Remera Performance</a></h3>
                     <p>Tejido liviano y ultra transpirable para entrenar con estilo.</p>
@@ -152,7 +113,7 @@
 
                 <article>
                     <a href="producto.html#legging-studio-fit">
-                        <img src="img/monitor.jpg" alt="Legging premium para entrenamiento femenino">
+                        <img src="img/legging-studio-fit.svg" alt="Legging premium para entrenamiento femenino Studio Fit">
                     </a>
                     <h3><a href="producto.html#legging-studio-fit">Legging Studio Fit</a></h3>
                     <p>Alta elasticidad, soporte y elegancia para cada movimiento.</p>
@@ -162,10 +123,10 @@
 
                 <article>
                     <a href="producto.html#performance-runner">
-                        <img src="img/tablet.jpg" alt="Zapatillas de alta performance femenina">
+                        <img src="img/performance-runner.svg" alt="Zapatillas de alta performance femenina Performance Runner">
                     </a>
                     <h3><a href="producto.html#performance-runner">Performance Runner</a></h3>
-                    <p>Diseño pensado para recorridos largos, intensidad y estilo.</p>
+                    <p>Diseñado para recorridos largos, intensidad y estilo.</p>
                     <strong>$44.500</strong>
                     <button type="button">Agregar al carrito</button>
                 </article>
@@ -207,6 +168,17 @@
             </form>
         </section>
     </main>
+
+    <section id="acceso" aria-labelledby="titulo-acceso">
+        <h2 id="titulo-acceso">Acceso de clientes</h2>
+        <form action="#" method="post">
+            <label for="acceso-email">Correo electrónico</label>
+            <input type="email" id="acceso-email" name="email" required>
+            <label for="acceso-contrasena">Contraseña</label>
+            <input type="password" id="acceso-contrasena" name="contrasena" required>
+            <button type="submit">Ingresar</button>
+        </form>
+    </section>
 
     <footer>
         <p>&copy; 2026 LunaFit. Todos los derechos reservados.</p>
