@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tu carrito de entrenamiento en LunaFit. Revisá tus prendas y finalizá tu compra de ropa deportiva femenina.">
+    <title>Carrito de compras - LunaFit</title>
+</head>
+<body>
+
+    <header>
+        <div class="encabezado">
+            <a href="index.html">
+                <img src="img/logo.png" alt="Logo de LunaFit">
+                <span>LunaFit</span>
+            </a>
+
+            <nav aria-label="Navegación principal">
+                <ul>
+                    <li><a href="index.html#catalogo">Colección</a></li>
+                    <li><a href="index.html#calzas">Calzas</a></li>
+                    <li><a href="index.html#tops">Tops</a></li>
+                    <li><a href="index.html#zapatillas">Zapatillas</a></li>
+                    <li><a href="index.html#ofertas">Ofertas</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <form action="#" method="get" role="search">
+                <label class="sr-only" for="buscar">Buscar prendas</label>
+                <input type="search" id="buscar" name="q" placeholder="Buscar prendas...">
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+    </header>
+
+    <main>
+
+        <section id="carrito" aria-labelledby="titulo-carrito">
+            <h2 id="titulo-carrito">Tu carrito de entrenamiento</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Subtotal</th>
+                        <th>Quitar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="producto.html#calza-power-flex">Calza Power Flex</a></td>
+                        <td>$18.500</td>
+                        <td>1</td>
+                        <td>$18.500</td>
+                        <td><button type="button">Quitar</button></td>
+                    </tr>
+                    <tr>
+                        <td><a href="producto.html#top-training-supreme">Top Training Supreme</a></td>
+                        <td>$14.900</td>
+                        <td>2</td>
+                        <td>$29.800</td>
+                        <td><button type="button">Quitar</button></td>
+                    </tr>
+                    <tr>
+                        <td><a href="producto.html#short-active-motion">Short Active Motion</a></td>
+                        <td>$12.800</td>
+                        <td>1</td>
+                        <td>$12.800</td>
+                        <td><button type="button">Quitar</button></td>
+                    </tr>
+                    <tr>
+                        <td><a href="producto.html#brazalete-sweat-pro">Brazalete Sweat Pro</a></td>
+                        <td>$7.200</td>
+                        <td>1</td>
+                        <td>$7.200</td>
+                        <td><button type="button">Quitar</button></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">Subtotal</td>
+                        <td>$68.300</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Envío</td>
+                        <td>Gratis</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Total</td>
+                        <td><strong>$68.300</strong></td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <section id="finalizar-compra" aria-labelledby="titulo-finalizar-compra">
+            <h2 id="titulo-finalizar-compra">Finalizar compra</h2>
+
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Datos de contacto y envío</legend>
+
+                    <label for="compra-nombre">Nombre y apellido</label>
+                    <input type="text" id="compra-nombre" name="nombre" required>
+
+                    <label for="compra-email">Correo electrónico</label>
+                    <input type="email" id="compra-email" name="email" required>
+
+                    <label for="compra-telefono">Teléfono</label>
+                    <input type="tel" id="compra-telefono" name="telefono" pattern="[0-9+\-\s]{7,15}" placeholder="Ej: 11 1234 5678">
+
+                    <label for="compra-direccion">Dirección</label>
+                    <input type="text" id="compra-direccion" name="direccion" required>
+
+                    <label for="compra-localidad">Localidad</label>
+                    <input type="text" id="compra-localidad" name="localidad" required>
+
+                    <label for="compra-cp">Código postal</label>
+                    <input type="text" id="compra-cp" name="codigo_postal" maxlength="8" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Medio de pago</legend>
+                    <label><input type="radio" name="medio-pago" value="tarjeta" required> Tarjeta de crédito</label>
+                    <label><input type="radio" name="medio-pago" value="debito"> Tarjeta de débito</label>
+                    <label><input type="radio" name="medio-pago" value="transferencia"> Transferencia bancaria</label>
+                    <label><input type="radio" name="medio-pago" value="mercado-pago"> Mercado Pago</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Datos de la tarjeta de crédito</legend>
+                    <p>Podés pagar en hasta 6 cuotas sin interés en compras seleccionadas.</p>
+
+                    <label for="compra-tarjeta">Número de tarjeta</label>
+                    <input type="text" id="compra-tarjeta" name="numero_tarjeta" inputmode="numeric" maxlength="19" placeholder="0000 0000 0000 0000">
+
+                    <label for="compra-titular">Titular</label>
+                    <input type="text" id="compra-titular" name="titular_tarjeta" placeholder="Nombre como figura en la tarjeta">
+
+                    <label for="compra-vencimiento">Vencimiento</label>
+                    <input type="month" id="compra-vencimiento" name="vencimiento">
+
+                    <label for="compra-codigo">Código de seguridad</label>
+                    <input type="text" id="compra-codigo" name="codigo_seguridad" inputmode="numeric" maxlength="4" placeholder="CVV">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Resumen de la compra</legend>
+                    <table>
+                        <tr>
+                            <td>Productos seleccionados</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Total a pagar</td>
+                            <td><strong>$68.300</strong></td>
+                        </tr>
+                    </table>
+                </fieldset>
+
+                <div class="acciones-carrito">
+                    <a href="index.html#catalogo">&larr; Seguir comprando</a>
+                    <button type="submit">Confirmar y pagar</button>
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 LunaFit. Todos los derechos reservados.</p>
+        <nav aria-label="Navegación del pie de página">
+            <ul>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="#">Términos y condiciones</a></li>
+                <li><a href="#">Política de privacidad</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+</body>
+</html>
