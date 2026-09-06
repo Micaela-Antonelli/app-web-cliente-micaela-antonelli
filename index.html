@@ -34,6 +34,17 @@
         </div>
     </header>
 
+    <section id="acceso" aria-labelledby="titulo-acceso">
+        <h2 id="titulo-acceso">Acceso de clientes</h2>
+        <form action="#" method="post">
+            <label for="acceso-email">Correo electrónico</label>
+            <input type="email" id="acceso-email" name="email" required>
+            <label for="acceso-contrasena">Contraseña</label>
+            <input type="password" id="acceso-contrasena" name="contrasena" required>
+            <button type="submit">Ingresar</button>
+        </form>
+    </section>
+
     <main>
         <section id="carrito" aria-label="Carrito de compras">
             <h2>Tu carrito de entrenamiento</h2>
@@ -182,13 +193,26 @@
             </ul>
             <button type="button">Sumarme al club</button>
         </section>
+
+        <section id="suscripcion" aria-labelledby="titulo-suscripcion">
+            <h2 id="titulo-suscripcion">Suscribite y obtené 10% off en tu primera compra</h2>
+            <form action="#" method="post">
+                <label for="suscripcion-nombre">Nombre</label>
+                <input type="text" id="suscripcion-nombre" name="nombre" required>
+                <label for="suscripcion-email">Correo electrónico</label>
+                <input type="email" id="suscripcion-email" name="email" required>
+                <label for="suscripcion-telefono">Teléfono</label>
+                <input type="tel" id="suscripcion-telefono" name="telefono" pattern="[0-9+\-\s]{7,15}" placeholder="Ej: 11 1234 5678">
+                <button type="submit">Quiero el descuento</button>
+            </form>
+        </section>
     </main>
 
     <footer>
         <p>&copy; 2026 LunaFit. Todos los derechos reservados.</p>
         <nav aria-label="Navegación del pie de página">
             <ul>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
                 <li><a href="#">Términos y condiciones</a></li>
                 <li><a href="#">Política de privacidad</a></li>
                 <li><a href="#">Instagram</a></li>

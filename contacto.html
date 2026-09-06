@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contactate con LunaFit: consultas, cambios, devoluciones e información de productos de ropa deportiva femenina.">
+    <title>Contacto - LunaFit</title>
+</head>
+<body>
+
+    <header>
+        <div class="encabezado">
+            <a href="index.html">
+                <img src="img/logo.png" alt="Logo de LunaFit">
+                <span>LunaFit</span>
+            </a>
+
+            <nav aria-label="Navegación principal">
+                <ul>
+                    <li><a href="index.html#catalogo">Colección</a></li>
+                    <li><a href="index.html#calzas">Calzas</a></li>
+                    <li><a href="index.html#tops">Tops</a></li>
+                    <li><a href="index.html#zapatillas">Zapatillas</a></li>
+                    <li><a href="index.html#ofertas">Ofertas</a></li>
+                    <li><a href="index.html#suscripcion">Suscripción</a></li>
+                </ul>
+            </nav>
+
+            <form action="#" method="get" role="search">
+                <label class="sr-only" for="buscar">Buscar prendas</label>
+                <input type="search" id="buscar" name="q" placeholder="Buscar prendas...">
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+    </header>
+
+    <main>
+        <section id="contacto" aria-labelledby="titulo-contacto">
+            <h2 id="titulo-contacto">Contacto de clientes</h2>
+            <p>Escribinos tu consulta y te respondemos a la brevedad. También podés llamarnos al (011) 4567-8900 o escribirnos a hola@lunafit.com.ar.</p>
+
+            <form action="#" method="post">
+                <label for="contacto-nombre">Nombre</label>
+                <input type="text" id="contacto-nombre" name="nombre" required>
+
+                <label for="contacto-email">Correo electrónico</label>
+                <input type="email" id="contacto-email" name="email" required>
+
+                <label for="contacto-telefono">Teléfono</label>
+                <input type="tel" id="contacto-telefono" name="telefono" pattern="[0-9+\-\s]{7,15}" placeholder="Ej: 11 1234 5678">
+
+                <label for="contacto-tema">Motivo de la consulta</label>
+                <select id="contacto-tema" name="tema">
+                    <option value="compra">Consulta por una compra</option>
+                    <option value="cambios">Cambios y devoluciones</option>
+                    <option value="productos">Información de productos</option>
+                    <option value="suscripcion">Suscripción y descuentos</option>
+                    <option value="otro">Otro</option>
+                </select>
+
+                <label for="contacto-mensaje">Tu mensaje</label>
+                <textarea id="contacto-mensaje" name="mensaje" rows="8" cols="40" placeholder="Escribí acá tu consulta..." required></textarea>
+
+                <button type="submit">Enviar mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 LunaFit. Todos los derechos reservados.</p>
+        <nav aria-label="Navegación del pie de página">
+            <ul>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="#">Términos y condiciones</a></li>
+                <li><a href="#">Política de privacidad</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+</body>
+</html>
