@@ -150,7 +150,7 @@ header {
 .buscador-contenedor input[type="text"] {
     width: 100%;
     border: none;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #bbb;
     background: transparent;
     padding: 0.4rem 0;
     font-size: 0.88rem;
@@ -170,6 +170,8 @@ header {
 .buscador-contenedor svg.icon-lupa {
     position: absolute;
     right: 0;
+    top: 50%;
+    transform: translateY(-50%);
     color: var(--negro);
     pointer-events: none;
     background: none;
@@ -222,6 +224,12 @@ header {
 .main-nav a:hover {
     color: #1a1a1a;
     border-bottom-color: #1a1a1a;
+}
+
+.main-nav a.active {
+    color: var(--negro);
+    border-bottom-color: var(--negro);
+    font-weight: 600;
 }
 
 .main-nav > ul > li {
@@ -1144,4 +1152,573 @@ footer nav a:hover {
     .buscador-contenedor input[type="text"] {
         width: 160px;
     }
+}
+
+.sucursales-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.sucursal-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    align-items: start;
+    background-color: var(--blanco);
+    border: 1px solid var(--gris-borde);
+    border-radius: 18px;
+    padding: 1.5rem;
+    transition: box-shadow 0.25s;
+}
+
+.sucursal-card:hover {
+    box-shadow: 0 10px 26px rgba(26, 26, 26, 0.1);
+}
+
+.sucursal-info h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--tinta);
+    margin-bottom: 0.5rem;
+}
+
+.sucursal-info h2::after {
+    display: none;
+}
+
+.sucursal-info .direccion {
+    font-size: 0.9rem;
+    color: var(--gris-texto);
+    margin-bottom: 0.3rem;
+}
+
+.sucursal-info .horario {
+    font-size: 0.85rem;
+    color: var(--gris-texto);
+    margin-bottom: 1rem;
+}
+
+.sucursal-acciones {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.btn-whatsapp,
+.btn-direcciones {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+    letter-spacing: 0.03em;
+}
+
+.btn-whatsapp {
+    background-color: #25D366;
+    color: var(--blanco);
+}
+
+.btn-whatsapp:hover {
+    background-color: #1ebe57;
+    transform: translateY(-2px);
+}
+
+.btn-direcciones {
+    background-color: var(--marino-fuerte);
+    color: var(--blanco);
+}
+
+.btn-direcciones:hover {
+    background-color: var(--negro);
+    transform: translateY(-2px);
+}
+
+.sucursal-map iframe {
+    width: 100%;
+    height: 200px;
+    border: none;
+    border-radius: 12px;
+    filter: grayscale(100%);
+    transition: filter 0.3s;
+}
+
+.sucursal-map iframe:hover {
+    filter: grayscale(80%);
+}
+
+@media (max-width: 760px) {
+    .sucursales-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sucursal-card {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Contacto page */
+.breadcrumb {
+    max-width: 1200px;
+    margin: 1rem auto 0;
+    padding: 0 1rem;
+    font-size: 0.85rem;
+    color: #aaa;
+}
+
+.breadcrumb a {
+    color: #333;
+    text-decoration: none;
+}
+
+.breadcrumb span {
+    color: #999;
+}
+
+#contacto {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+#contacto h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.contacto-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.contacto-info h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--tinta);
+}
+
+.contacto-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    margin-bottom: 1.2rem;
+}
+
+.contacto-item i {
+    font-size: 1.2rem;
+    color: var(--marino-fuerte);
+    margin-top: 0.2rem;
+}
+
+.contacto-item strong {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--tinta);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.2rem;
+}
+
+.contacto-item p {
+    font-size: 0.95rem;
+    color: var(--gris-texto);
+    margin: 0;
+}
+
+.contacto-info h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 1.8rem 0 0.8rem;
+    color: var(--tinta);
+}
+
+.redes-sociales {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.redes-sociales a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--marino-suave);
+    color: var(--tinta);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.redes-sociales a:hover {
+    background-color: var(--marino-fuerte);
+    color: var(--blanco);
+}
+
+.contacto-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--tinta);
+    margin-bottom: 0.3rem;
+}
+
+.form-group label span {
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0;
+    color: #999;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 0.7rem 0.9rem;
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--tinta);
+    background-color: var(--blanco);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--marino-fuerte);
+    box-shadow: 0 0 0 3px rgba(11, 29, 58, 0.16);
+}
+
+.recaptcha-container {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 0;
+}
+
+.recaptcha-placeholder {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 0.5rem 1.2rem;
+    background-color: var(--marino-suave);
+    font-size: 0.85rem;
+    color: #999;
+    cursor: pointer;
+}
+
+.btn-enviar {
+    align-self: flex-end;
+    background-color: #e0e0e0;
+    color: var(--tinta);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn-enviar:hover {
+    background-color: #ccc;
+    transform: translateY(-2px);
+}
+
+.btn-enviar:active {
+    transform: scale(0.98);
+}
+
+/* Active nav indicator */
+nav .active {
+    color: var(--negro) !important;
+    border-bottom-color: var(--negro) !important;
+    font-weight: 600;
+}
+
+@media (max-width: 760px) {
+    .contacto-container {
+        grid-template-columns: 1fr;
+    }
+
+    #contacto h1 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Login link in header */
+.login-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: var(--negro);
+    white-space: nowrap;
+    transition: color 0.2s;
+}
+
+.login-link:hover {
+    color: var(--marino-texto);
+}
+
+/* Benefits strip on home */
+#beneficios-mini {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+    padding: 1rem 1.5rem;
+    border: 1px solid var(--gris-borde);
+    border-radius: 999px;
+    background-color: var(--blanco);
+    font-size: 0.88rem;
+    color: var(--gris-texto);
+}
+
+#beneficios-mini span,
+#beneficios-mini a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+#beneficios-mini a {
+    color: var(--negro);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+#beneficios-mini a:hover {
+    color: var(--marino-fuerte);
+    text-decoration: underline;
+}
+
+/* Login page */
+#acceso-usuarios {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.club-box {
+    border: 1px solid var(--gris-borde);
+    border-radius: 14px;
+    background-color: #faf6ee;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    font-size: 0.95rem;
+    color: var(--gris-texto);
+    margin-bottom: 2.5rem;
+}
+
+.club-box strong {
+    color: var(--negro);
+}
+
+.login-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: start;
+}
+
+.login-col {
+    background-color: var(--blanco);
+    border: 1px solid var(--gris-borde);
+    border-radius: 18px;
+    padding: 2rem 1.8rem;
+}
+
+.login-col h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--tinta);
+    margin-bottom: 1.5rem;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.login-form .form-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--tinta);
+    margin-bottom: 0.3rem;
+}
+
+.login-form .form-group input {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 0.7rem 0.9rem;
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--tinta);
+    background-color: var(--blanco);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.login-form .form-group input:focus {
+    outline: none;
+    border-color: var(--marino-fuerte);
+    box-shadow: 0 0 0 3px rgba(11, 29, 58, 0.16);
+}
+
+.forgot-link {
+    font-size: 0.85rem;
+    color: var(--marino-fuerte);
+    text-decoration: none;
+    align-self: flex-start;
+    transition: color 0.2s;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+    color: var(--negro);
+}
+
+.btn-accion {
+    background-color: var(--marino-fuerte);
+    color: var(--blanco);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    padding: 0.85rem 1.6rem;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+    margin-top: 0.5rem;
+}
+
+.btn-accion:hover {
+    background-color: var(--negro);
+    transform: translateY(-2px);
+}
+
+.btn-accion:active {
+    transform: scale(0.98);
+}
+
+@media (max-width: 760px) {
+    .login-container {
+        grid-template-columns: 1fr;
+    }
+
+    #beneficios-mini {
+        border-radius: 18px;
+        gap: 0.8rem;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+/* Product collection page */
+#coleccion h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--tinta);
+    text-align: center;
+    margin: 2rem 0 0.5rem;
+}
+
+#coleccion > .intro {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: var(--gris-texto);
+}
+
+#coleccion article {
+    max-width: 1100px;
+    margin: 0 auto 3rem;
+    padding: 1.8rem;
+    background-color: var(--blanco);
+    border: 1px solid var(--gris-borde);
+    border-radius: 18px;
+}
+
+#coleccion article > h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--tinta);
+    text-align: left;
+    margin: 0 0 1rem;
+}
+
+#coleccion article > img {
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: 12px;
+    background-color: var(--gris-claro);
+}
+
+#coleccion article section {
+    margin-top: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#coleccion article section h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--negro);
+    margin: 0;
+}
+
+#coleccion article section h2::after {
+    content: none;
+}
+
+#coleccion article section p {
+    font-size: 0.95rem;
+    color: var(--gris-texto);
+    line-height: 1.7;
+}
+
+#coleccion article {
+    display: none;
+}
+
+#coleccion article.producto-activo {
+    display: block;
 }

@@ -10,71 +10,56 @@
 </head>
 <body>
 
+    <div class="top-bar">
+        <div class="top-bar-carrusel">
+            <span class="top-msg">Envío gratis a todo el país a partir de $100.000 | 15% OFF abonando por transferencia | 6 cuotas sin interés</span>
+        </div>
+    </div>
+
     <header>
-        <div class="encabezado">
-            <a href="index.html">
-                <img src="https://i.pinimg.com/originals/ee/85/86/ee85865e600d3fa1d4a6a34c75fcd834.jpg?nii=t" alt="Logo de PuntoFit" style="width: 500px; height: 90px;">
-                <span>PuntoFit</span>
-            </a>
+        <div class="header-main">
+            <div class="header-left">
+                <div class="buscador-contenedor">
+                    <label class="sr-only" for="buscar">Buscar prendas</label>
+                    <input type="text" id="buscar" name="q" placeholder="Buscar...">
+                    <svg class="icon-lupa" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </div>
+            </div>
 
-            <nav aria-label="Navegación principal">
-                <ul>
-                    <li><a href="index.html">INICIO</a></li>
-                    <li class="menu-item">
-                        <a href="index.html#catalogo">PRODUCTOS</a>
-                        <div class="submenu">
-                            <ul class="submenu-categorias">
-                                <li>
-                                    <a class="destacado" href="index.html#ofertas">SALE - ÚLTIMAS UNIDADES</a>
-                                    <ul>
-                                        <li><a href="index.html#catalogo">CÁPSULA DIKKA</a></li>
-                                        <li><a href="index.html#catalogo">CAMPERAS</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="producto.html#top-training-supreme">TOPS</a>
-                                    <ul>
-                                        <li><a href="index.html#tops">SIN tazas</a></li>
-                                        <li><a href="index.html#tops">CON tazas</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="index.html#calzas">CALZAS LARGAS</a>
-                                    <ul>
-                                        <li><a href="index.html#calzas">CON frunce</a></li>
-                                        <li><a href="index.html#calzas">SIN frunce</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="index.html#calzas">CALZAS CORTAS</a>
-                                    <ul>
-                                        <li><a href="index.html#calzas">CON frunce</a></li>
-                                        <li><a href="index.html#calzas">SIN frunce</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="producto.html#performance-runner">CATSUIT</a>
-                                    <ul>
-                                        <li><a href="producto.html#remera-performance">JOGGING</a></li>
-                                        <li><a href="index.html#catalogo">KIT DIKKA</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="index.html#catalogo">GIFT CARD</a>
-                                </li>
+            <div class="header-center">
+                <a href="index.html" class="logo-link">
+                    <img src="https://i.pinimg.com/originals/ee/85/86/ee85865e600d3fa1d4a6a34c75fcd83.jpg?nii=t" alt="PuntoFit" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                    <span class="logo-text">PuntoFit</span>
+                </a>
+                <nav aria-label="Navegación principal" class="main-nav">
+                    <ul>
+                        <li><a href="index.html">INICIO</a></li>
+                        <li class="menu-item">
+                            <a href="index.html#catalogo">PRODUCTOS</a>
+                            <ul class="submenu-vertical">
+                                <li><a href="index.html#tops">TOP</a></li>
+                                <li><a href="index.html#shorts">SHORT</a></li>
+                                <li><a href="index.html#conjuntos">CONJUNTOS</a></li>
+                                <li><a href="index.html#calzas">CALZAS</a></li>
+                                <li><a href="index.html#remeras">REMERAS</a></li>
+                                <li><a href="index.html#joggers">JOGGERS</a></li>
                             </ul>
-                        </div>
-                    </li>
-                    <li><a href="contacto.html">CAMBIOS</a></li>
-                    <li><a href="contacto.html">CONTACTO</a></li>
-                </ul>
-            </nav>
+                        </li>
+                        <li><a href="sucursales.html">SUCURSALES</a></li>
+                        <li><a href="contacto.html">CONTACTO</a></li>
+                    </ul>
+                </nav>
+            </div>
 
-            <form action="#" method="get" role="search">
-                <label class="sr-only" for="buscar">Buscar prendas</label>
-                <input type="search" id="buscar" name="q" placeholder="Buscar prendas...">
-                <button type="submit">Buscar</button>
-            </form>
+            <div class="header-right">
+                <a href="login.html" class="login-link" aria-label="Ingresá o registrate">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    <span>Ingresá / Registráte</span>
+                </a>
+                <a href="carrito.html" class="carrito-btn" aria-label="Ir al carrito">
+                    <span class="carrito-icon">🛒</span>
+                </a>
+            </div>
         </div>
     </header>
 
