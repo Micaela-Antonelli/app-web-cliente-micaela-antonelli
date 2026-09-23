@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contactate con PuntoFit: consultas, cambios, devoluciones e información de productos de ropa deportiva femenina.">
-    <title>Contacto - PuntoFit</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Iniciá sesión o creá tu cuenta en Club PuntoFit para acumular puntos y acceder a descuentos exclusivos.">
+    <title>Ingresá - PuntoFit</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -47,13 +46,13 @@
                             </ul>
                         </li>
                         <li><a href="sucursales.html">SUCURSALES</a></li>
-                        <li><a href="contacto.html" class="active">CONTACTO</a></li>
+                        <li><a href="contacto.html">CONTACTO</a></li>
                     </ul>
                 </nav>
             </div>
 
             <div class="header-right">
-                <a href="login.html" class="login-link" aria-label="Ingresá o registrate">
+                <a href="login.html" class="login-link active" aria-label="Ingresá o registrate">
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
                     <span>Ingresá / Registráte</span>
                 </a>
@@ -65,81 +64,55 @@
     </header>
 
     <main>
-        <nav aria-label="Miga de pan" class="breadcrumb">
-            <a href="index.html">Inicio</a> / <span>Contacto</span>
-        </nav>
+        <section id="acceso-usuarios" aria-labelledby="titulo-acceso-usuarios">
+            <div class="club-box">
+                <p><strong>¡Sumá puntos con tu compra!</strong> Iniciá sesión o registrate para acumular puntos en Club PuntoFit y acceder a descuentos exclusivos.</p>
+            </div>
 
-        <section id="contacto" aria-labelledby="titulo-contacto">
-            <h1 id="titulo-contacto">Contacto</h1>
-
-            <div class="contacto-container">
-                <div class="contacto-info">
-                    <h2>Contactanos</h2>
-
-                    <div class="contacto-item">
-                        <i class="fa-solid fa-phone"></i>
-                        <div>
-                            <strong>Teléfono / WhatsApp</strong>
-                            <p>(011) 4567-8900</p>
+            <div class="login-container">
+                <div class="login-col">
+                    <h2>Iniciar Sesión</h2>
+                    <form action="#" method="post" class="login-form">
+                        <div class="form-group">
+                            <label for="login-email">EMAIL</label>
+                            <input type="email" id="login-email" name="email" required>
                         </div>
-                    </div>
 
-                    <div class="contacto-item">
-                        <i class="fa-solid fa-envelope"></i>
-                        <div>
-                            <strong>Email</strong>
-                            <p>hola@puntofit.com.ar</p>
+                        <div class="form-group">
+                            <label for="login-password">CONTRASEÑA</label>
+                            <input type="password" id="login-password" name="password" required>
                         </div>
-                    </div>
 
-                    <div class="contacto-item">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <div>
-                            <strong>Dirección</strong>
-                            <p>Av. Corrientes 1234, Local 45 - Buenos Aires</p>
-                        </div>
-                    </div>
+                        <a href="#" class="forgot-link">¿Olvidaste tu contraseña?</a>
 
-                    <h3>Seguinos</h3>
-                    <div class="redes-sociales">
-                        <a href="https://instagram.com/puntofit" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                        <a href="https://facebook.com/puntofit" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </a>
-                    </div>
+                        <button type="submit" class="btn-accion">INICIAR SESIÓN</button>
+                    </form>
                 </div>
 
-                <div class="contacto-form">
-                    <form action="#" method="post">
+                <div class="login-col">
+                    <h2>Crear Cuenta</h2>
+                    <form action="#" method="post" class="login-form">
                         <div class="form-group">
-                            <label for="nombre">NOMBRE</label>
-                            <input type="text" id="nombre" name="nombre" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email">EMAIL</label>
-                            <input type="email" id="email" name="email" required>
+                            <label for="reg-nombre">NOMBRE</label>
+                            <input type="text" id="reg-nombre" name="nombre" required>
                         </div>
 
                         <div class="form-group">
-                            <label for="telefono">TELÉFONO <span>(OPCIONAL)</span></label>
-                            <input type="tel" id="telefono" name="telefono" pattern="[0-9+\-\s]{7,15}">
+                            <label for="reg-apellido">APELLIDO</label>
+                            <input type="text" id="reg-apellido" name="apellido" required>
                         </div>
 
                         <div class="form-group">
-                            <label for="mensaje">MENSAJE <span>(OPCIONAL)</span></label>
-                            <textarea id="mensaje" name="mensaje" rows="5"></textarea>
+                            <label for="reg-email">EMAIL</label>
+                            <input type="email" id="reg-email" name="email" required>
                         </div>
 
-                        <div class="recaptcha-container">
-                            <div class="recaptcha-placeholder">
-                                <span>No soy un robot</span>
-                            </div>
+                        <div class="form-group">
+                            <label for="reg-password">CONTRASEÑA</label>
+                            <input type="password" id="reg-password" name="password" required>
                         </div>
 
-                        <button type="submit" class="btn-enviar">ENVIAR</button>
+                        <button type="submit" class="btn-accion">CREAR CUENTA Y SUMAR PUNTOS</button>
                     </form>
                 </div>
             </div>

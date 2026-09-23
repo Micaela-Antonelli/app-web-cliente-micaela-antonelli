@@ -13,8 +13,6 @@
     <div class="top-bar">
         <div class="top-bar-carrusel">
             <span class="top-msg">Envío gratis a todo el país a partir de $100.000 | 15% OFF abonando por transferencia | 6 cuotas sin interés</span>
-            <span class="top-msg">Envío gratis a todo el país a partir de $100.000 | 15% OFF abonando por transferencia | 6 cuotas sin interés</span>
-            <span class="top-msg">Envío gratis a todo el país a partir de $100.000 | 15% OFF abonando por transferencia | 6 cuotas sin interés</span>
         </div>
     </div>
 
@@ -33,9 +31,31 @@
                     <img src="https://i.pinimg.com/originals/ee/85/86/ee85865e600d3fa1d4a6a34c75fcd83.jpg?nii=t" alt="PuntoFit" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
                     <span class="logo-text">PuntoFit</span>
                 </a>
+                <nav aria-label="Navegación principal" class="main-nav">
+                    <ul>
+                        <li><a href="index.html">INICIO</a></li>
+                        <li class="menu-item">
+                            <a href="index.html#catalogo">PRODUCTOS</a>
+                            <ul class="submenu-vertical">
+                                <li><a href="index.html#tops">TOP</a></li>
+                                <li><a href="index.html#shorts">SHORT</a></li>
+                                <li><a href="index.html#conjuntos">CONJUNTOS</a></li>
+                                <li><a href="index.html#calzas">CALZAS</a></li>
+                                <li><a href="index.html#remeras">REMERAS</a></li>
+                                <li><a href="index.html#joggers">JOGGERS</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="sucursales.html">SUCURSALES</a></li>
+                        <li><a href="contacto.html">CONTACTO</a></li>
+                    </ul>
+                </nav>
             </div>
 
             <div class="header-right">
+                <a href="login.html" class="login-link" aria-label="Ingresá o registrate">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    <span>Ingresá / Registráte</span>
+                </a>
                 <a href="carrito.html" class="carrito-btn" aria-label="Ir al carrito">
                     <span class="carrito-icon">🛒</span>
                 </a>
@@ -44,70 +64,343 @@
     </header>
 
     <main>
-        <section id="calza-power-flex" aria-labelledby="titulo-calza-power-flex">
-            <p><a href="index.html#catalogo">&larr; Volver a la colección</a></p>
-            <div class="detalle-producto">
-                <div class="galeria">
-                    <img src="https://acdn-us.mitiendanube.com/stores/002/157/111/products/4-bda71bdb2722f0a54117854465263608-1024-1024.webp" alt="Calza Power Flex" class="foto-principal">
-                    <div class="miniaturas">
-                        <img src="https://dcdn-us.mitiendanube.com/stores/001/437/082/products/12-3-e601666a9203d24f3917858479017936-640-0.webp" alt="Calza Power Flex vista frontal">
-                        <img src="https://dcdn-us.mitiendanube.com/stores/001/437/082/products/12-2-4e5b5b5b5b5b5b5b5b5b5b5b5b5b5b5b-640-0.webp" alt="Calza Power Flex vista lateral">
-                        <img src="https://dcdn-us.mitiendanube.com/stores/001/437/082/products/12-1-1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a-640-0.webp" alt="Calza Power Flex detalle">
+        <nav aria-label="Miga de pan" class="breadcrumb">
+            <a href="index.html">Inicio</a> / <a href="index.html#catalogo">Productos</a>
+        </nav>
+
+        <section id="coleccion" aria-labelledby="titulo-coleccion">
+            <article id="calza-power-flex">
+                <h1>Calza Power Flex</h1>
+                <div class="detalle-producto">
+                    <img src="https://dcdn-us.mitiendanube.com/stores/001/437/082/products/12-3-e601666a9203d24f3917858479017936-640-0.webp" alt="Calza Power Flex" class="foto-principal">
+                    <div class="informacion">
+                        <p class="precio">$18.500</p>
+                        <p class="cuotas">3 cuotas sin interés de $6.166</p>
+
+                        <fieldset class="talles">
+                            <legend>Elegí tu talle</legend>
+                            <div class="talles-opciones">
+                                <label><input type="radio" name="talle-calza-power-flex" value="XS"> XS</label>
+                                <label><input type="radio" name="talle-calza-power-flex" value="S"> S</label>
+                                <label><input type="radio" name="talle-calza-power-flex" value="M"> M</label>
+                                <label><input type="radio" name="talle-calza-power-flex" value="L"> L</label>
+                                <label><input type="radio" name="talle-calza-power-flex" value="XL"> XL</label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="colores">
+                            <legend>Elegí el color</legend>
+                            <div class="colores-opciones">
+                                <label><input type="radio" name="color-calza-power-flex" value="negro"> <span class="color-dot" style="background-color:#1a1a1a;"></span></label>
+                                <label><input type="radio" name="color-calza-power-flex" value="gris"> <span class="color-dot" style="background-color:#8b7355;"></span></label>
+                                <label><input type="radio" name="color-calza-power-flex" value="rosa"> <span class="color-dot" style="background-color:#d47070;"></span></label>
+                            </div>
+                        </fieldset>
+
+                        <a href="carrito.html" class="btn-agregar">AGREGAR AL CARRITO</a>
                     </div>
                 </div>
-                <div class="informacion">
-                    <h1 id="titulo-calza-power-flex">Calza Power Flex</h1>
-                    <p class="precio">$18.500</p>
-                    <p class="cuotas">3 cuotas sin interés de $6.166</p>
+                <section>
+                    <h2>Descripción de Calza Power Flex</h2>
+                    <p>La Power Flex combina compresión ligera con tejido de secado rápido. Te da soporte en cada sentadilla y total libertad de movimiento para correr, saltar o entrenar la fuerza. Cintura alta con ajuste cómodo que no marca bajo la ropa.</p>
+                </section>
+            </article>
 
-                    <fieldset class="talles">
-                        <legend>Elegí tu talle</legend>
-                        <div class="talles-opciones">
-                            <label><input type="radio" name="talle" value="XS"> XS</label>
-                            <label><input type="radio" name="talle" value="S"> S</label>
-                            <label><input type="radio" name="talle" value="M"> M</label>
-                            <label><input type="radio" name="talle" value="L"> L</label>
-                            <label><input type="radio" name="talle" value="XL"> XL</label>
-                        </div>
-                        <a href="#" class="guia-talles">Guía de talles</a>
-                    </fieldset>
+            <article id="top-training-supreme">
+                <h1>Top Training Supreme</h1>
+                <div class="detalle-producto">
+                    <img src="https://dcdn-us.mitiendanube.com/stores/001/437/082/products/7-1-a9b23f0b6805a4d71617858459848276-1024-1024.webp" alt="Top Training Supreme" class="foto-principal">
+                    <div class="informacion">
+                        <p class="precio">$14.900</p>
+                        <p class="cuotas">3 cuotas sin interés de $4.966</p>
 
-                    <fieldset class="colores">
-                        <legend>Elegí el color</legend>
-                        <div class="colores-opciones">
-                            <label><input type="radio" name="color" value="negro"> <span class="color-dot" style="background-color:#1a1a1a;"></span></label>
-                            <label><input type="radio" name="color" value="gris"> <span class="color-dot" style="background-color:#8b7355;"></span></label>
-                            <label><input type="radio" name="color" value="rosa"> <span class="color-dot" style="background-color:#d47070;"></span></label>
-                        </div>
-                    </fieldset>
+                        <fieldset class="talles">
+                            <legend>Elegí tu talle</legend>
+                            <div class="talles-opciones">
+                                <label><input type="radio" name="talle-top-training-supreme" value="XS"> XS</label>
+                                <label><input type="radio" name="talle-top-training-supreme" value="S"> S</label>
+                                <label><input type="radio" name="talle-top-training-supreme" value="M"> M</label>
+                                <label><input type="radio" name="talle-top-training-supreme" value="L"> L</label>
+                                <label><input type="radio" name="talle-top-training-supreme" value="XL"> XL</label>
+                            </div>
+                        </fieldset>
 
-                    <fieldset class="cantidad">
-                        <legend>Cantidad</legend>
-                        <div class="cantidad-controles">
-                            <button type="button" aria-label="Restar">-</button>
-                            <span>1</span>
-                            <button type="button" aria-label="Sumar">+</button>
-                        </div>
-                    </fieldset>
+                        <fieldset class="colores">
+                            <legend>Elegí el color</legend>
+                            <div class="colores-opciones">
+                                <label><input type="radio" name="color-top-training-supreme" value="negro"> <span class="color-dot" style="background-color:#1a1a1a;"></span></label>
+                                <label><input type="radio" name="color-top-training-supreme" value="blanco"> <span class="color-dot" style="background-color:#f5f5f5;"></span></label>
+                                <label><input type="radio" name="color-top-training-supreme" value="rosa"> <span class="color-dot" style="background-color:#d47070;"></span></label>
+                            </div>
+                        </fieldset>
 
-                    <a href="carrito.html" class="btn-agregar">AGREGAR AL CARRITO</a>
-
-                    <div class="pestanas">
-                        <details class="pestana">
-                            <summary>Descripción</summary>
-                            <p>La Power Flex combina compresión ligera con tejido de secado rápido. Te da soporte en cada sentadilla y total libertad de movimiento para correr, saltar o entrenar la fuerza. Cintura alta con ajuste cómodo que no marca bajo la ropa.</p>
-                        </details>
-                        <details class="pestana">
-                            <summary>Composición / Materiales</summary>
-                            <p>80% Poliéster, 20% Elastano. Tejido de alta densidad con tecnología de compresión media que moldea y sostiene sin restringir el movimiento.</p>
-                        </details>
-                        <details class="pestana">
-                            <summary>Instrucciones de lavado</summary>
-                            <p>Lavar a máquina con agua fría, del lado del revés y sin suavizante. No usar secadora ni plancha a alta temperatura. No usar blanqueadores.</p>
-                        </details>
+                        <a href="carrito.html" class="btn-agregar">AGREGAR AL CARRITO</a>
                     </div>
                 </div>
-            </div>
+                <section>
+                    <h2>Descripción de Top Training Supreme</h2>
+                    <p>Top deportivo con sujeción media, ideal para entrenamientos de alta intensidad. Su tejido transpirable mantiene la frescura y el soporte en cada movimiento.</p>
+                </section>
+            </article>
+
+            <article id="zapatillas-run-flex">
+                <h1>Conjunto Run Flex</h1>
+                <div class="detalle-producto">
+                    <img src="https://dcdn-us.mitiendanube.com/stores/001/437/082/products/3-1-fdb9260892e7a173a317858436227626-1024-1024.webp" alt="Conjunto Run Flex" class="foto-principal">
+                    <div class="informacion">
+                        <p class="precio">$39.900</p>
+                        <p class="cuotas">3 cuotas sin interés de $13.300</p>
+
+                        <fieldset class="talles">
+                            <legend>Elegí tu talle</legend>
+                            <div class="talles-opciones">
+                                <label><input type="radio" name="talle-zapatillas-run-flex" value="XS"> XS</label>
+                                <label><input type="radio" name="talle-zapatillas-run-flex" value="S"> S</label>
+                                <label><input type="radio" name="talle-zapatillas-run-flex" value="M"> M</label>
+                                <label><input type="radio" name="talle-zapatillas-run-flex" value="L"> L</label>
+                                <label><input type="radio" name="talle-zapatillas-run-flex" value="XL"> XL</label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="colores">
+                            <legend>Elegí el color</legend>
+                            <div class="colores-opciones">
+                                <label><input type="radio" name="color-zapatillas-run-flex" value="negro"> <span class="color-dot" style="background-color:#1a1a1a;"></span></label>
+                                <label><input type="radio" name="color-zapatillas-run-flex" value="gris"> <span class="color-dot" style="background-color:#8b7355;"></span></label>
+                                <label><input type="radio" name="color-zapatillas-run-flex" value="verde"> <span class="color-dot" style="background-color:#5a7964;"></span></label>
+                            </div>
+                        </fieldset>
+
+                        <a href="carrito.html" class="btn-agregar">AGREGAR AL CARRITO</a>
+                    </div>
+                </div>
+                <section>
+                    <h2>Descripción de Conjunto Run Flex</h2>
+                    <p>Conjunto de entrenamiento con flexibilidad total y diseño moderno. Pensado para correr con comodidad y estilo, combinando tops y calzas de alto rendimiento.</p>
+                </section>
+            </article>
+
+            <article id="remera-performance">
+                <h1>Remera Performance</h1>
+                <div class="detalle-producto">
+                    <img src="https://dcdn-us.mitiendanube.com/stores/001/437/082/products/5-23-f31000e193709dc10717899927379600-1024-1024.webp" alt="Remera Performance" class="foto-principal">
+                    <div class="informacion">
+                        <p class="precio">$13.200</p>
+                        <p class="cuotas">3 cuotas sin interés de $4.400</p>
+
+                        <fieldset class="talles">
+                            <legend>Elegí tu talle</legend>
+                            <div class="talles-opciones">
+                                <label><input type="radio" name="talle-remera-performance" value="XS"> XS</label>
+                                <label><input type="radio" name="talle-remera-performance" value="S"> S</label>
+                                <label><input type="radio" name="talle-remera-performance" value="M"> M</label>
+                                <label><input type="radio" name="talle-remera-performance" value="L"> L</label>
+                                <label><input type="radio" name="talle-remera-performance" value="XL"> XL</label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="colores">
+                            <legend>Elegí el color</legend>
+                            <div class="colores-opciones">
+                                <label><input type="radio" name="color-remera-performance" value="negro"> <span class="color-dot" style="background-color:#1a1a1a;"></span></label>
+                                <label><input type="radio" name="color-remera-performance" value="bordo"> <span class="color-dot" style="background-color:#7a2e2e;"></span></label>
+                                <label><input type="radio" name="color-remera-performance" value="blanco"> <span class="color-dot" style="background-color:#f5f5f5;"></span></label>
+                            </div>
+                        </fieldset>
+
+                        <a href="carrito.html" class="btn-agregar">AGREGAR AL CARRITO</a>
+                    </div>
+                </div>
+                <section>
+                    <h2>Descripción de Remera Performance</h2>
+                    <p>Remera liviana de secado rápido con corte holgado. Perfecta para entrenamientos de fuerza, running o uso diario con un look deportivo y versátil.</p>
+                </section>
+            </article>
+
+            <article id="legging-studio-fit">
+                <h1>Legging Studio Fit</h1>
+                <div class="detalle-producto">
+                    <img src="https://dcdn-us.mitiendanube.com/stores/001/437/082/products/290-f50d543e2134eb0d9317721252309775-1024-1024.webp" alt="Legging Studio Fit" class="foto-principal">
+                    <div class="informacion">
+                        <p class="precio">$21.900</p>
+                        <p class="cuotas">3 cuotas sin interés de $7.300</p>
+
+                        <fieldset class="talles">
+                            <legend>Elegí tu talle</legend>
+                            <div class="talles-opciones">
+                                <label><input type="radio" name="talle-legging-studio-fit" value="XS"> XS</label>
+                                <label><input type="radio" name="talle-legging-studio-fit" value="S"> S</label>
+                                <label><input type="radio" name="talle-legging-studio-fit" value="M"> M</label>
+                                <label><input type="radio" name="talle-legging-studio-fit" value="L"> L</label>
+                                <label><input type="radio" name="talle-legging-studio-fit" value="XL"> XL</label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="colores">
+                            <legend>Elegí el color</legend>
+                            <div class="colores-opciones">
+                                <label><input type="radio" name="color-legging-studio-fit" value="negro"> <span class="color-dot" style="background-color:#1a1a1a;"></span></label>
+                                <label><input type="radio" name="color-legging-studio-fit" value="gris"> <span class="color-dot" style="background-color:#8b7355;"></span></label>
+                                <label><input type="radio" name="color-legging-studio-fit" value="violeta"> <span class="color-dot" style="background-color:#5d4a87;"></span></label>
+                            </div>
+                        </fieldset>
+
+                        <a href="carrito.html" class="btn-agregar">AGREGAR AL CARRITO</a>
+                    </div>
+                </div>
+                <section>
+                    <h2>Descripción de Legging Studio Fit</h2>
+                    <p>Legging de tiro alto con compresión media que moldea y sostiene. Su tejido de alta densidad acompaña cada movimiento, ideal para studio, yoga y pilates.</p>
+                </section>
+            </article>
+
+            <article id="short-active-motion">
+                <h1>Pollera Active Motion</h1>
+                <div class="detalle-producto">
+                    <img src="https://dcdn-us.mitiendanube.com/stores/001/437/082/products/10-1-8e7d3845acaa69ad9c17858471082226-1024-1024.webp" alt="Pollera Active Motion" class="foto-principal">
+                    <div class="informacion">
+                        <p class="precio">$12.800</p>
+                        <p class="cuotas">3 cuotas sin interés de $4.266</p>
+
+                        <fieldset class="talles">
+                            <legend>Elegí tu talle</legend>
+                            <div class="talles-opciones">
+                                <label><input type="radio" name="talle-short-active-motion" value="XS"> XS</label>
+                                <label><input type="radio" name="talle-short-active-motion" value="S"> S</label>
+                                <label><input type="radio" name="talle-short-active-motion" value="M"> M</label>
+                                <label><input type="radio" name="talle-short-active-motion" value="L"> L</label>
+                                <label><input type="radio" name="talle-short-active-motion" value="XL"> XL</label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="colores">
+                            <legend>Elegí el color</legend>
+                            <div class="colores-opciones">
+                                <label><input type="radio" name="color-short-active-motion" value="negro"> <span class="color-dot" style="background-color:#1a1a1a;"></span></label>
+                                <label><input type="radio" name="color-short-active-motion" value="gris"> <span class="color-dot" style="background-color:#8b7355;"></span></label>
+                                <label><input type="radio" name="color-short-active-motion" value="azul"> <span class="color-dot" style="background-color:#3a4a6b;"></span></label>
+                            </div>
+                        </fieldset>
+
+                        <a href="carrito.html" class="btn-agregar">AGREGAR AL CARRITO</a>
+                    </div>
+                </div>
+                <section>
+                    <h2>Descripción de Pollera Active Motion</h2>
+                    <p>Pollera deportiva con shorts integrados que brinda total libertad de movimiento. Fresca, versátil y cómoda para entrenar o para looks urbanos.</p>
+                </section>
+            </article>
+
+            <article id="brazalete-sweat-pro">
+                <h1>Top Sweat Pro</h1>
+                <div class="detalle-producto">
+                    <img src="https://dcdn-us.mitiendanube.com/stores/001/437/082/products/14-6-de0187bc6a070a9df217858491163156-480-0.webp" alt="Top Sweat Pro" class="foto-principal">
+                    <div class="informacion">
+                        <p class="precio">$7.200</p>
+                        <p class="cuotas">3 cuotas sin interés de $2.400</p>
+
+                        <fieldset class="talles">
+                            <legend>Elegí tu talle</legend>
+                            <div class="talles-opciones">
+                                <label><input type="radio" name="talle-brazalete-sweat-pro" value="XS"> XS</label>
+                                <label><input type="radio" name="talle-brazalete-sweat-pro" value="S"> S</label>
+                                <label><input type="radio" name="talle-brazalete-sweat-pro" value="M"> M</label>
+                                <label><input type="radio" name="talle-brazalete-sweat-pro" value="L"> L</label>
+                                <label><input type="radio" name="talle-brazalete-sweat-pro" value="XL"> XL</label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="colores">
+                            <legend>Elegí el color</legend>
+                            <div class="colores-opciones">
+                                <label><input type="radio" name="color-brazalete-sweat-pro" value="negro"> <span class="color-dot" style="background-color:#1a1a1a;"></span></label>
+                                <label><input type="radio" name="color-brazalete-sweat-pro" value="gris"> <span class="color-dot" style="background-color:#8b7355;"></span></label>
+                                <label><input type="radio" name="color-brazalete-sweat-pro" value="rosa"> <span class="color-dot" style="background-color:#d47070;"></span></label>
+                            </div>
+                        </fieldset>
+
+                        <a href="carrito.html" class="btn-agregar">AGREGAR AL CARRITO</a>
+                    </div>
+                </div>
+                <section>
+                    <h2>Descripción de Top Sweat Pro</h2>
+                    <p>Top con tazas y sujeción firme para entrenamientos exigentes. Su material aboga la humedad y aporta un ajuste cómodo y seguro.</p>
+                </section>
+            </article>
+
+            <article id="conjuntos-dikka">
+                <h1>Conjunto Dikka</h1>
+                <div class="detalle-producto">
+                    <img src="https://dcdn-us.mitiendanube.com/stores/001/437/082/products/243-0b92e5b80a1b14067717866254933901-1024-1024.webp" alt="Conjunto Dikka" class="foto-principal">
+                    <div class="informacion">
+                        <p class="precio">$32.000</p>
+                        <p class="cuotas">3 cuotas sin interés de $10.666</p>
+
+                        <fieldset class="talles">
+                            <legend>Elegí tu talle</legend>
+                            <div class="talles-opciones">
+                                <label><input type="radio" name="talle-conjuntos-dikka" value="XS"> XS</label>
+                                <label><input type="radio" name="talle-conjuntos-dikka" value="S"> S</label>
+                                <label><input type="radio" name="talle-conjuntos-dikka" value="M"> M</label>
+                                <label><input type="radio" name="talle-conjuntos-dikka" value="L"> L</label>
+                                <label><input type="radio" name="talle-conjuntos-dikka" value="XL"> XL</label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="colores">
+                            <legend>Elegí el color</legend>
+                            <div class="colores-opciones">
+                                <label><input type="radio" name="color-conjuntos-dikka" value="negro"> <span class="color-dot" style="background-color:#1a1a1a;"></span></label>
+                                <label><input type="radio" name="color-conjuntos-dikka" value="gris"> <span class="color-dot" style="background-color:#8b7355;"></span></label>
+                                <label><input type="radio" name="color-conjuntos-dikka" value="violeta"> <span class="color-dot" style="background-color:#5d4a87;"></span></label>
+                            </div>
+                        </fieldset>
+
+                        <a href="carrito.html" class="btn-agregar">AGREGAR AL CARRITO</a>
+                    </div>
+                </div>
+                <section>
+                    <h2>Descripción de Conjunto Dikka</h2>
+                    <p>Conjunto premium que combina top y calza con estampa exclusiva. Tejido de alta calidad con compresión y estilo para destacar en el gimnasio.</p>
+                </section>
+            </article>
+
+            <article id="performance-runner">
+                <h1>Performance Runner</h1>
+                <div class="detalle-producto">
+                    <img src="https://acdn-us.mitiendanube.com/stores/005/641/912/products/6-419129f7dc12c91d6517626186715062-1024-1024.webp" alt="Performance Runner" class="foto-principal">
+                    <div class="informacion">
+                        <p class="precio">$44.500</p>
+                        <p class="cuotas">3 cuotas sin interés de $14.833</p>
+
+                        <fieldset class="talles">
+                            <legend>Elegí tu talle</legend>
+                            <div class="talles-opciones">
+                                <label><input type="radio" name="talle-performance-runner" value="XS"> XS</label>
+                                <label><input type="radio" name="talle-performance-runner" value="S"> S</label>
+                                <label><input type="radio" name="talle-performance-runner" value="M"> M</label>
+                                <label><input type="radio" name="talle-performance-runner" value="L"> L</label>
+                                <label><input type="radio" name="talle-performance-runner" value="XL"> XL</label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="colores">
+                            <legend>Elegí el color</legend>
+                            <div class="colores-opciones">
+                                <label><input type="radio" name="color-performance-runner" value="negro"> <span class="color-dot" style="background-color:#1a1a1a;"></span></label>
+                                <label><input type="radio" name="color-performance-runner" value="azul"> <span class="color-dot" style="background-color:#3a4a6b;"></span></label>
+                                <label><input type="radio" name="color-performance-runner" value="gris"> <span class="color-dot" style="background-color:#8b7355;"></span></label>
+                            </div>
+                        </fieldset>
+
+                        <a href="carrito.html" class="btn-agregar">AGREGAR AL CARRITO</a>
+                    </div>
+                </div>
+                <section>
+                    <h2>Descripción de Performance Runner</h2>
+                    <p>Conjunto runner con tecnología de compresión y secado rápido. Diseñado para darlo todo en cada carrera con soporte, frescura y estilo.</p>
+                </section>
+            </article>
         </section>
     </main>
 
@@ -122,6 +415,31 @@
             </ul>
         </nav>
     </footer>
+
+    <script>
+        (function () {
+            var articles = document.querySelectorAll('#coleccion article');
+
+            function mostrarDesdeHash() {
+                var id = location.hash ? location.hash.slice(1) : '';
+                var hay = false;
+                articles.forEach(function (a) {
+                    if (a.id === id) {
+                        a.classList.add('producto-activo');
+                        hay = true;
+                    } else {
+                        a.classList.remove('producto-activo');
+                    }
+                });
+                if (!hay && articles.length) {
+                    articles[0].classList.add('producto-activo');
+                }
+            }
+
+            window.addEventListener('hashchange', mostrarDesdeHash);
+            mostrarDesdeHash();
+        })();
+    </script>
 
 </body>
 </html>
