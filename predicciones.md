@@ -8,3 +8,5 @@ predicciones
 7-Voy a crear  pestañas adicionales en el menu que sean guia de talles y sucursales. 
 8-Voy a hacer ajustes estructurales y de diseño del sitio: Borrando la seccion de "Acceso a clientes" y la explicacion extensa sobre el programa de puntos que esta ubicada antes del footer  para poner sus iconos arriba a la derecha , donde haces click y ahi esta la info mejor organizada. Para eso voy  a maquetar la pagina login.html manteniendo el footer y heeader globales. agregar una caja con la propuesta del beneficio para que los clientes se registren y los formularios necesarios para iniciar secsion y crear cuenta manteniendo los estilos.
 9-voy a modificar el logo y tambien ponerlo de icono en el title de la pagina.
+10-Voy a agregar el icono quitar/agregar a mi archivo carrito.html para hacerlo lo mas real posible. 
+
