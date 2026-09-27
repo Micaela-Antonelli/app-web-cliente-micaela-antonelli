@@ -2330,3 +2330,50 @@ footer nav a:hover {
         grid-template-columns: 1fr;
     }
 }
+
+/* ==========================================================
+   VALIDACIÓN NATIVA DE FORMULARIOS
+   ----------------------------------------------------------
+   Los estados :user-invalid / :user-valid SOLO se activan
+   despues de que el usuario interactua con el campo, asi
+   que el formulario nunca carga en rojo ni en verde.
+
+   Cobertura: :user-invalid / :user-valid (Chrome 119+,
+   Safari 16.5+, Firefox 88+). En navegadores viejos el
+   navegador descarta ese selector y queda el fallback
+   :focus:invalid / :focus:valid, que tambien exige
+   interaccion: no hay borde rojo al cargar la pagina.
+
+   El scope `form` deja afuera los inputs del header
+   (buscador, hamburguesa, menu Productos). Los radios y
+   checkboxes se excluyen a proposito: se pintan distinto
+   y no deben heredar borde ni fondo.
+   ========================================================== */
+
+:root {
+    --pf-error: #c62828;
+    --pf-error-bg: #fdf1f0;
+    --pf-error-glow: rgba(198, 40, 40, 0.15);
+    --pf-ok: #2e7d32;
+    --pf-ok-bg: #f1f8f2;
+    --pf-ok-glow: rgba(46, 125, 50, 0.15);
+}
+
+/* --- INVALIDO: rojo suave, solo tras interactuar --- */
+form :is(input, select, textarea):not([type='radio']):not([type='checkbox']):user-invalid,
+form :is(input, select, textarea):not([type='radio']):not([type='checkbox']):focus:invalid:not(:placeholder-shown) {
+    border-color: var(--pf-error);
+    background-color: var(--pf-error-bg);
+    box-shadow: 0 0 0 3px var(--pf-error-glow);
+}
+
+/* --- VALIDO: verde suave, solo si el campo quedo completo ---
+   El :not(:placeholder-shown) es lo que evita que un campo
+   OPCIONAL y vacio se ponga verde: si el placeholder todavia
+   se ve, el usuario no escribio nada. */
+form :is(input, select, textarea):not([type='radio']):not([type='checkbox']):user-valid:is(:required, [type='email'], [pattern]):not(:placeholder-shown),
+form :is(input, select, textarea):not([type='radio']):not([type='checkbox']):focus:valid:not(:placeholder-shown) {
+    border-color: var(--pf-ok);
+    background-color: var(--pf-ok-bg);
+    box-shadow: 0 0 0 3px var(--pf-ok-glow);
+}

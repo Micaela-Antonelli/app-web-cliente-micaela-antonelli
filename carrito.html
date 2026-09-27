@@ -204,7 +204,7 @@
                     <input type="email" id="compra-email" name="email" required>
 
                     <label for="compra-telefono">Teléfono</label>
-                    <input type="tel" id="compra-telefono" name="telefono" pattern="[0-9+\-\s]{7,15}" placeholder="Ej: 11 1234 5678">
+                    <input type="tel" id="compra-telefono" name="telefono" pattern="(?=(?:.*[0-9]){7})[0-9+\-\s]{7,20}" placeholder="Ej: 11 1234-5678">
 
                     <label for="compra-direccion">Dirección</label>
                     <input type="text" id="compra-direccion" name="direccion" required>
