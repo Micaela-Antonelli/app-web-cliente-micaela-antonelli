@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Iniciá sesión o creá tu cuenta en Club PuntoFit para acumular puntos y acceder a descuentos exclusivos.">
+    <title>Ingresá - PuntoFit</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="top-bar-carrusel" tabindex="0" aria-label="Promociones destacadas">
+            <ul class="top-bar-list">
+                <li>Envío gratis a todo el país a partir de $100.000</li>
+                <li>15% OFF abonando por transferencia</li>
+                <li>6 cuotas sin interés</li>
+            </ul>
+            <ul class="top-bar-list" aria-hidden="true">
+                <li>Envío gratis a todo el país a partir de $100.000</li>
+                <li>15% OFF abonando por transferencia</li>
+                <li>6 cuotas sin interés</li>
+            </ul>
+        </div>
+    </div>
+
+    <header class="site-header">
+        <div class="header-bar">
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+
+            <div class="header-logo">
+                <a href="index.html" class="logo-link">
+                    <span class="logo-text">PuntoFit</span>
+                </a>
+            </div>
+
+            <label class="nav-burger" for="nav-toggle">
+                <span class="sr-only">Ver menú de navegación</span>
+                <span class="burger-bar" aria-hidden="true"></span>
+            </label>
+
+            <div class="header-search">
+                <div class="buscador-contenedor">
+                    <label class="sr-only" for="buscar">Buscar prendas</label>
+                    <input type="text" id="buscar" name="q" placeholder="Buscar...">
+                    <svg class="icon-lupa" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </div>
+            </div>
+
+            <nav class="main-nav" aria-label="Navegación principal">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item nav-item--has-submenu">
+                        <input type="checkbox" id="submenu-productos" class="submenu-toggle">
+                        <label class="nav-link nav-link--toggle" for="submenu-productos">
+                            Productos <span class="nav-caret" aria-hidden="true"></span>
+                        </label>
+                        <ul class="submenu">
+                            <li><a class="submenu-link" href="index.html#tops">Top</a></li>
+                            <li><a class="submenu-link" href="index.html#shorts">Short</a></li>
+                            <li><a class="submenu-link" href="index.html#conjuntos">Conjuntos</a></li>
+                            <li><a class="submenu-link" href="index.html#calzas">Calzas</a></li>
+                            <li><a class="submenu-link" href="index.html#remeras">Remeras</a></li>
+                            <li><a class="submenu-link" href="index.html#joggers">Joggers</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sucursales.html">Sucursales</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="login.html" class="login-link" aria-current="page">Ingresar</a>
+                <a href="registro.html" class="login-link">Registrate</a>
+                <a href="carrito.html" class="carrito-btn" aria-label="Ir al carrito">
+                    <span class="carrito-icon" aria-hidden="true">&#128722;</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="acceso-usuarios" aria-labelledby="titulo-acceso-usuarios">
+            <div class="login-container">
+                <div class="login-col">
+                    <h2 id="titulo-acceso-usuarios">Iniciar Sesión</h2>
+                    <form action="#" method="post" class="login-form">
+                        <div class="form-group">
+                            <label for="login-email">Correo Electrónico</label>
+                            <input type="email" id="login-email" name="email" placeholder="tucorreo@ejemplo.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="login-password">Contraseña</label>
+                            <input type="password" id="login-password" name="password" required>
+                        </div>
+
+                        <button type="submit" class="btn-accion">INICIAR SESIÓN</button>
+                    </form>
+
+                    <p class="register-link">¿No tenés cuenta? <a href="registro.html">Registrate acá</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 PuntoFit. Todos los derechos reservados.</p>
+        <nav aria-label="Navegación del pie de página">
+            <ul>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="#">Términos y condiciones</a></li>
+                <li><a href="#">Política de privacidad</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tu carrito de entrenamiento en PuntoFit. Revisá tus prendas y finalizá tu compra de ropa deportiva femenina.">
+    <title>Carrito de compras - PuntoFit</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="top-bar-carrusel" tabindex="0" aria-label="Promociones destacadas">
+            <ul class="top-bar-list">
+                <li>Envío gratis a todo el país a partir de $100.000</li>
+                <li>15% OFF abonando por transferencia</li>
+                <li>6 cuotas sin interés</li>
+            </ul>
+            <ul class="top-bar-list" aria-hidden="true">
+                <li>Envío gratis a todo el país a partir de $100.000</li>
+                <li>15% OFF abonando por transferencia</li>
+                <li>6 cuotas sin interés</li>
+            </ul>
+        </div>
+    </div>
+
+    <header class="site-header">
+        <div class="header-bar">
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+
+            <div class="header-logo">
+                <a href="index.html" class="logo-link">
+                    <span class="logo-text">PuntoFit</span>
+                </a>
+            </div>
+
+            <label class="nav-burger" for="nav-toggle">
+                <span class="sr-only">Ver menú de navegación</span>
+                <span class="burger-bar" aria-hidden="true"></span>
+            </label>
+
+            <div class="header-search">
+                <div class="buscador-contenedor">
+                    <label class="sr-only" for="buscar">Buscar prendas</label>
+                    <input type="text" id="buscar" name="q" placeholder="Buscar...">
+                    <svg class="icon-lupa" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </div>
+            </div>
+
+            <nav class="main-nav" aria-label="Navegación principal">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item nav-item--has-submenu">
+                        <input type="checkbox" id="submenu-productos" class="submenu-toggle">
+                        <label class="nav-link nav-link--toggle" for="submenu-productos">
+                            Productos <span class="nav-caret" aria-hidden="true"></span>
+                        </label>
+                        <ul class="submenu">
+                            <li><a class="submenu-link" href="index.html#tops">Top</a></li>
+                            <li><a class="submenu-link" href="index.html#shorts">Short</a></li>
+                            <li><a class="submenu-link" href="index.html#conjuntos">Conjuntos</a></li>
+                            <li><a class="submenu-link" href="index.html#calzas">Calzas</a></li>
+                            <li><a class="submenu-link" href="index.html#remeras">Remeras</a></li>
+                            <li><a class="submenu-link" href="index.html#joggers">Joggers</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sucursales.html">Sucursales</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="login.html" class="login-link">Ingresar</a>
+                <a href="registro.html" class="login-link">Registrate</a>
+                <a href="carrito.html" class="carrito-btn" aria-current="page" aria-label="Ir al carrito">
+                    <span class="carrito-icon" aria-hidden="true">&#128722;</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <section id="carrito" aria-labelledby="titulo-carrito">
+            <h2 id="titulo-carrito">Tu carrito de entrenamiento</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Subtotal</th>
+                        <th>Quitar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="producto.html#calza-power-flex">Calza Power Flex</a></td>
+                        <td>$18.500</td>
+                        <td>
+                            <div class="cantidad-stepper">
+                                <button type="button" aria-label="Restar cantidad">−</button>
+                                <input type="number" value="1" min="1" aria-label="Cantidad" name="cantidad">
+                                <button type="button" aria-label="Sumar cantidad">+</button>
+                            </div>
+                        </td>
+                        <td>$18.500</td>
+                        <td>
+                            <button type="button" class="btn-eliminar" aria-label="Eliminar producto">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><line x1="10" y1="11" x2="10" y2="17"/><line x1="14" y1="11" x2="14" y2="17"/></svg>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="producto.html#top-training-supreme">Top Training Supreme</a></td>
+                        <td>$14.900</td>
+                        <td>
+                            <div class="cantidad-stepper">
+                                <button type="button" aria-label="Restar cantidad">−</button>
+                                <input type="number" value="1" min="1" aria-label="Cantidad" name="cantidad">
+                                <button type="button" aria-label="Sumar cantidad">+</button>
+                            </div>
+                        </td>
+                        <td>$29.800</td>
+                        <td>
+                            <button type="button" class="btn-eliminar" aria-label="Eliminar producto">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><line x1="10" y1="11" x2="10" y2="17"/><line x1="14" y1="11" x2="14" y2="17"/></svg>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="producto.html#short-active-motion">Short Active Motion</a></td>
+                        <td>$12.800</td>
+                        <td>
+                            <div class="cantidad-stepper">
+                                <button type="button" aria-label="Restar cantidad">−</button>
+                                <input type="number" value="1" min="1" aria-label="Cantidad" name="cantidad">
+                                <button type="button" aria-label="Sumar cantidad">+</button>
+                            </div>
+                        </td>
+                        <td>$12.800</td>
+                        <td>
+                            <button type="button" class="btn-eliminar" aria-label="Eliminar producto">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><line x1="10" y1="11" x2="10" y2="17"/><line x1="14" y1="11" x2="14" y2="17"/></svg>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="producto.html#brazalete-sweat-pro">Brazalete Sweat Pro</a></td>
+                        <td>$7.200</td>
+                        <td>
+                            <div class="cantidad-stepper">
+                                <button type="button" aria-label="Restar cantidad">−</button>
+                                <input type="number" value="1" min="1" aria-label="Cantidad" name="cantidad">
+                                <button type="button" aria-label="Sumar cantidad">+</button>
+                            </div>
+                        </td>
+                        <td>$7.200</td>
+                        <td>
+                            <button type="button" class="btn-eliminar" aria-label="Eliminar producto">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><line x1="10" y1="11" x2="10" y2="17"/><line x1="14" y1="11" x2="14" y2="17"/></svg>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">Subtotal</td>
+                        <td>$68.300</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Envío</td>
+                        <td>Gratis</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Total</td>
+                        <td><strong>$68.300</strong></td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <section id="finalizar-compra" aria-labelledby="titulo-finalizar-compra">
+            <h2 id="titulo-finalizar-compra">Finalizar compra</h2>
+
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Datos de contacto y envío</legend>
+
+                    <label for="compra-nombre">Nombre y apellido</label>
+                    <input type="text" id="compra-nombre" name="nombre" required>
+
+                    <label for="compra-email">Correo electrónico</label>
+                    <input type="email" id="compra-email" name="email" required>
+
+                    <label for="compra-telefono">Teléfono</label>
+                    <input type="tel" id="compra-telefono" name="telefono" pattern="[0-9+\-\s]{7,15}" placeholder="Ej: 11 1234 5678">
+
+                    <label for="compra-direccion">Dirección</label>
+                    <input type="text" id="compra-direccion" name="direccion" required>
+
+                    <label for="compra-localidad">Localidad</label>
+                    <input type="text" id="compra-localidad" name="localidad" required>
+
+                    <label for="compra-cp">Código postal</label>
+                    <input type="text" id="compra-cp" name="codigo_postal" maxlength="8" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Medio de pago</legend>
+                    <label><input type="radio" name="medio-pago" value="tarjeta" required> Tarjeta de crédito</label>
+                    <label><input type="radio" name="medio-pago" value="debito"> Tarjeta de débito</label>
+                    <label><input type="radio" name="medio-pago" value="transferencia"> Transferencia bancaria</label>
+                    <label><input type="radio" name="medio-pago" value="mercado-pago"> Mercado Pago</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Datos de la tarjeta de crédito</legend>
+                    <p>Podés pagar en hasta 6 cuotas sin interés en compras seleccionadas.</p>
+
+                    <label for="compra-tarjeta">Número de tarjeta</label>
+                    <input type="text" id="compra-tarjeta" name="numero_tarjeta" inputmode="numeric" maxlength="19" placeholder="0000 0000 0000 0000">
+
+                    <label for="compra-titular">Titular</label>
+                    <input type="text" id="compra-titular" name="titular_tarjeta" placeholder="Nombre como figura en la tarjeta">
+
+                    <label for="compra-vencimiento">Vencimiento</label>
+                    <input type="month" id="compra-vencimiento" name="vencimiento">
+
+                    <label for="compra-codigo">Código de seguridad</label>
+                    <input type="text" id="compra-codigo" name="codigo_seguridad" inputmode="numeric" maxlength="4" placeholder="CVV">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Resumen de la compra</legend>
+                    <table>
+                        <tr>
+                            <td>Productos seleccionados</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Total a pagar</td>
+                            <td><strong>$68.300</strong></td>
+                        </tr>
+                    </table>
+                </fieldset>
+
+                <div class="acciones-carrito">
+                    <a href="index.html#catalogo">&larr; Seguir comprando</a>
+                    <button type="submit">Confirmar y pagar</button>
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 PuntoFit. Todos los derechos reservados.</p>
+        <nav aria-label="Navegación del pie de página">
+            <ul>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="#">Términos y condiciones</a></li>
+                <li><a href="#">Política de privacidad</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+</body>
+</html>
