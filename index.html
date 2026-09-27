@@ -11,51 +11,76 @@
 <body>
 
     <div class="top-bar">
-        <div class="top-bar-carrusel">
-            <span class="top-msg">Envío gratis a todo el país a partir de $100.000 | 15% OFF abonando por transferencia | 6 cuotas sin interés</span>
+        <div class="top-bar-carrusel" tabindex="0" aria-label="Promociones destacadas">
+            <ul class="top-bar-list">
+                <li>Envío gratis a todo el país a partir de $100.000</li>
+                <li>15% OFF abonando por transferencia</li>
+                <li>6 cuotas sin interés</li>
+            </ul>
+            <ul class="top-bar-list" aria-hidden="true">
+                <li>Envío gratis a todo el país a partir de $100.000</li>
+                <li>15% OFF abonando por transferencia</li>
+                <li>6 cuotas sin interés</li>
+            </ul>
         </div>
     </div>
 
-    <header>
-        <div class="header-main">
-            <div class="header-left">
+    <header class="site-header">
+        <div class="header-bar">
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+
+            <div class="header-logo">
+                <a href="index.html" class="logo-link">
+                    <span class="logo-text">PuntoFit</span>
+                </a>
+            </div>
+
+            <label class="nav-burger" for="nav-toggle">
+                <span class="sr-only">Ver menú de navegación</span>
+                <span class="burger-bar" aria-hidden="true"></span>
+            </label>
+
+            <div class="header-search">
                 <div class="buscador-contenedor">
                     <label class="sr-only" for="buscar">Buscar prendas</label>
                     <input type="text" id="buscar" name="q" placeholder="Buscar...">
-                    <svg class="icon-lupa" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                    <svg class="icon-lupa" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
                 </div>
             </div>
 
-            <div class="header-center">
-                <a href="index.html" class="logo-link">
-                    <img src="https://i.pinimg.com/originals/ee/85/86/ee85865e600d3fa1d4a6a34c75fcd83.jpg?nii=t" alt="PuntoFit" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
-                    <span class="logo-text">PuntoFit</span>
-                </a>
-                <nav aria-label="Navegación principal" class="main-nav">
-                    <ul>
-                        <li><a href="index.html">INICIO</a></li>
-                        <li class="menu-item">
-                            <a href="index.html#catalogo">PRODUCTOS</a>
-                            <ul class="submenu-vertical">
-                                <li><a href="index.html#tops">TOP</a></li>
-                                <li><a href="index.html#shorts">SHORT</a></li>
-                                <li><a href="index.html#conjuntos">CONJUNTOS</a></li>
-                                <li><a href="index.html#calzas">CALZAS</a></li>
-                                <li><a href="index.html#remeras">REMERAS</a></li>
-                                <li><a href="index.html#joggers">JOGGERS</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="sucursales.html">SUCURSALES</a></li>
-                        <li><a href="contacto.html">CONTACTO</a></li>
-                    </ul>
-                </nav>
-            </div>
+            <nav class="main-nav" aria-label="Navegación principal">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a class="nav-link is-active" href="index.html" aria-current="page">Inicio</a>
+                    </li>
+                    <li class="nav-item nav-item--has-submenu">
+                        <input type="checkbox" id="submenu-productos" class="submenu-toggle">
+                        <label class="nav-link nav-link--toggle" for="submenu-productos">
+                            Productos <span class="nav-caret" aria-hidden="true"></span>
+                        </label>
+                        <ul class="submenu">
+                            <li><a class="submenu-link" href="index.html#tops">Top</a></li>
+                            <li><a class="submenu-link" href="index.html#shorts">Short</a></li>
+                            <li><a class="submenu-link" href="index.html#conjuntos">Conjuntos</a></li>
+                            <li><a class="submenu-link" href="index.html#calzas">Calzas</a></li>
+                            <li><a class="submenu-link" href="index.html#remeras">Remeras</a></li>
+                            <li><a class="submenu-link" href="index.html#joggers">Joggers</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sucursales.html">Sucursales</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
 
-            <div class="header-right">
-                <a href="login.html" class="login-link" aria-label="Ingresar">Ingresar</a>
-                <a href="login.html" class="login-link" aria-label="Registrate">Registrate</a>
+            <div class="header-actions">
+                <a href="login.html" class="login-link">Ingresar</a>
+                <a href="registro.html" class="login-link">Registrate</a>
                 <a href="carrito.html" class="carrito-btn" aria-label="Ir al carrito">
-                    <span class="carrito-icon">🛒</span>
+                    <span class="carrito-icon" aria-hidden="true">&#128722;</span>
                 </a>
             </div>
         </div>
