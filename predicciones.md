@@ -10,4 +10,6 @@ predicciones
 9-voy a modificar el logo y tambien ponerlo de icono en el title de la pagina.
 10-Voy a agregar el icono quitar/agregar a mi archivo carrito.html para hacerlo lo mas real posible. 
 11-Voy a realizar una correccion sobre el formulario de Registrate , el cual debe llevarlo a registro.html, pero en su lugar llo lleva a login. Vamos a modificar eso
+12-voy a estandarizar el header en todo mi sitio web tomando como base la estructura HTMl y CSS de mi index.html replicando ese header en carrito.html, login.html y ajustar las reclas de CSS responsive (media queries) para que se visualice exactamente igual de forma adaptativa en todas las paginas , utilizando unicamente HTML Y CSS puro
+
 
