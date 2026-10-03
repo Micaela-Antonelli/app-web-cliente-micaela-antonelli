@@ -1,0 +1,137 @@
+/* ==========================================================
+   SUCURSALES
+   ========================================================== */
+
+.sucursales-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.sucursal-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    align-items: start;
+    background-color: var(--blanco);
+    border: 1px solid var(--gris-borde);
+    border-radius: 18px;
+    padding: 1.5rem;
+    transition: box-shadow 0.25s;
+}
+
+.sucursal-card:hover {
+    box-shadow: 0 10px 26px rgba(26, 26, 26, 0.1);
+}
+
+.sucursal-info h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--tinta);
+    margin-bottom: 0.5rem;
+}
+
+.sucursal-info h2::after {
+    display: none;
+}
+
+.sucursal-info .direccion {
+    font-size: 0.9rem;
+    color: var(--gris-texto);
+    margin-bottom: 0.3rem;
+}
+
+.sucursal-info .horario {
+    font-size: 0.85rem;
+    color: var(--gris-texto);
+    margin-bottom: 1rem;
+}
+
+.sucursal-acciones {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.btn-whatsapp,
+.btn-direcciones {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+    letter-spacing: 0.03em;
+}
+
+.btn-whatsapp {
+    background-color: #25D366;
+    color: var(--blanco);
+}
+
+.btn-whatsapp:hover {
+    background-color: #1ebe57;
+    transform: translateY(-2px);
+}
+
+.btn-direcciones {
+    background-color: var(--marino-fuerte);
+    color: var(--blanco);
+}
+
+.btn-direcciones:hover {
+    background-color: var(--negro);
+    transform: translateY(-2px);
+}
+
+.sucursal-map iframe {
+    width: 100%;
+    height: 200px;
+    border: none;
+    border-radius: 12px;
+    filter: grayscale(100%);
+    transition: filter 0.3s;
+}
+
+.sucursal-map iframe:hover {
+    filter: grayscale(80%);
+}
+
+/* ==========================================================
+   MEDIA QUERIES
+   ========================================================== */
+
+@media (max-width: 768px) {
+    .sucursales-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.25rem;
+    }
+}
+
+@media (max-width: 760px) {
+    .sucursales-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sucursal-card {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .sucursales-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sucursal-card {
+        grid-template-columns: 1fr;
+    }
+}

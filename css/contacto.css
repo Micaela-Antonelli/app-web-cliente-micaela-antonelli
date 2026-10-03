@@ -1,0 +1,114 @@
+/* ==========================================================
+   CONTACTO
+   ========================================================== */
+
+#contacto {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+#contacto h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.contacto-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.contacto-info h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--tinta);
+}
+
+.contacto-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    margin-bottom: 1.2rem;
+}
+
+.contacto-item i {
+    font-size: 1.2rem;
+    color: var(--marino-fuerte);
+    margin-top: 0.2rem;
+}
+
+.contacto-item strong {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--tinta);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.2rem;
+}
+
+.contacto-item p {
+    font-size: 0.95rem;
+    color: var(--gris-texto);
+    margin: 0;
+}
+
+.contacto-info h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 1.8rem 0 0.8rem;
+    color: var(--tinta);
+}
+
+.redes-sociales {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.redes-sociales a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--marino-suave);
+    color: var(--tinta);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.redes-sociales a:hover {
+    background-color: var(--marino-fuerte);
+    color: var(--blanco);
+}
+
+/* ==========================================================
+   MEDIA QUERIES
+   ========================================================== */
+
+@media (max-width: 760px) {
+    .contacto-container {
+        grid-template-columns: 1fr;
+    }
+
+    #contacto h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    #contacto h1 {
+        font-size: 1.5rem;
+    }
+
+    .contacto-container {
+        grid-template-columns: 1fr;
+    }
+}
