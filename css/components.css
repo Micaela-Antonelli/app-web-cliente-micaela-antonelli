@@ -1,0 +1,475 @@
+/* ==========================================================
+   BOTONES — variantes unificadas
+   ========================================================== */
+
+.btn-enviar {
+    align-self: flex-end;
+    background-color: #e0e0e0;
+    color: var(--tinta);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn-enviar:hover {
+    background-color: #ccc;
+    transform: translateY(-2px);
+}
+
+.btn-enviar:active {
+    transform: scale(0.98);
+}
+
+.btn-accion {
+    background-color: var(--marino-fuerte);
+    color: var(--blanco);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    padding: 0.85rem 1.6rem;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+    margin-top: 0.5rem;
+}
+
+.btn-accion:hover {
+    background-color: var(--negro);
+    transform: translateY(-2px);
+}
+
+.btn-accion:active {
+    transform: scale(0.98);
+}
+
+/* ==========================================================
+   GRILLA DE PRODUCTOS
+   ========================================================== */
+
+.grilla-productos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    justify-items: center;
+    justify-content: center;
+}
+
+.grilla-productos article {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding: 1rem;
+    border: 1px solid var(--gris-borde);
+    border-radius: 18px;
+    background-color: var(--blanco);
+    transition: box-shadow 0.25s, transform 0.25s;
+}
+
+.grilla-productos article:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 26px rgba(26, 26, 26, 0.1);
+}
+
+.grilla-productos img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    background-color: var(--gris-claro);
+}
+
+.grilla-productos h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-top: 0.4rem;
+}
+
+.grilla-productos h3 a {
+    text-decoration: none;
+    color: var(--tinta);
+    transition: color 0.2s;
+}
+
+.grilla-productos h3 a:hover {
+    color: var(--marino-fuerte);
+}
+
+.grilla-productos p {
+    font-size: 0.95rem;
+    color: var(--gris-texto);
+    flex-grow: 1;
+}
+
+.grilla-productos del {
+    color: #999088;
+    font-size: 0.85rem;
+}
+
+.grilla-productos strong {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--negro);
+}
+
+.grilla-productos button {
+    width: 100%;
+    margin-top: 0.6rem;
+    text-align: center;
+}
+
+/* ==========================================================
+   TABLAS
+   ========================================================== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--blanco);
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+th,
+td {
+    padding: 0.9rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--gris-borde);
+}
+
+thead th {
+    background-color: var(--negro);
+    color: var(--blanco);
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+tfoot td {
+    font-weight: 600;
+    color: var(--tinta);
+    border-top: 2px solid var(--gris-borde);
+    border-bottom: none;
+}
+
+tbody tr:hover {
+    background-color: #faf6ee;
+}
+
+table button {
+    padding: 0.4rem 1rem;
+    font-size: 0.85rem;
+    background-color: var(--gris-claro);
+    color: var(--tinta);
+}
+
+table button:hover {
+    background-color: var(--negro);
+    color: var(--blanco);
+}
+
+/* ==========================================================
+   CONTROLES DE CANTIDAD
+   ========================================================== */
+
+.cantidad-stepper {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    width: max-content;
+}
+
+.cantidad-stepper button {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--gris-borde);
+    border-radius: 6px;
+    background-color: var(--blanco);
+    color: var(--tinta);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.cantidad-stepper button:hover {
+    background-color: var(--negro);
+    color: var(--blanco);
+    border-color: var(--negro);
+}
+
+.cantidad-stepper input[type="number"] {
+    width: 52px;
+    height: 32px;
+    padding: 0;
+    text-align: center;
+    border: 1px solid var(--gris-borde);
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    color: var(--tinta);
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.cantidad-stepper input[type="number"]::-webkit-outer-spin-button,
+.cantidad-stepper input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.btn-eliminar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border: 1px solid var(--gris-borde);
+    border-radius: 6px;
+    background-color: var(--blanco);
+    color: var(--gris-texto);
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-eliminar:hover {
+    background-color: var(--negro);
+    color: var(--blanco);
+    border-color: var(--negro);
+}
+
+/* ==========================================================
+   ACORDEONES
+   ========================================================== */
+
+details {
+    border: 1px solid var(--gris-borde);
+    border-radius: 12px;
+    padding: 0.7rem 1rem;
+    margin: 0.5rem 0;
+    background-color: var(--blanco);
+}
+
+summary {
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.98rem;
+    color: var(--tinta);
+}
+
+details ul,
+details p {
+    margin-top: 0.5rem;
+    font-size: 0.92rem;
+    color: var(--gris-texto);
+    padding-left: 1rem;
+}
+
+/* ==========================================================
+   BREADCRUMB
+   ========================================================== */
+
+.breadcrumb {
+    max-width: 1200px;
+    margin: 1rem auto 0;
+    padding: 0 1rem;
+    font-size: 0.85rem;
+    color: #aaa;
+}
+
+.breadcrumb a {
+    color: #333;
+    text-decoration: none;
+}
+
+.breadcrumb span {
+    color: #999;
+}
+
+/* ==========================================================
+   BENEFICIOS MINI
+   ========================================================== */
+
+#beneficios-mini {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+    padding: 1rem 1.5rem;
+    border: 1px solid var(--gris-borde);
+    border-radius: 999px;
+    background-color: var(--blanco);
+    font-size: 0.88rem;
+    color: var(--gris-texto);
+}
+
+#beneficios-mini span,
+#beneficios-mini a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+#beneficios-mini a {
+    color: var(--negro);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+#beneficios-mini a:hover {
+    color: var(--marino-fuerte);
+    text-decoration: underline;
+}
+
+/* ==========================================================
+   CLUB BOX
+   ========================================================== */
+
+.club-box {
+    border: 1px solid var(--gris-borde);
+    border-radius: 14px;
+    background-color: #faf6ee;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    font-size: 0.95rem;
+    color: var(--gris-texto);
+    margin-bottom: 2.5rem;
+}
+
+.club-box strong {
+    color: var(--negro);
+}
+
+/* ==========================================================
+   COLECCIÓN
+   ========================================================== */
+
+#coleccion h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--tinta);
+    text-align: center;
+    margin: 2rem 0 0.5rem;
+}
+
+#coleccion > .intro {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: var(--gris-texto);
+}
+
+#coleccion article {
+    max-width: 1100px;
+    margin: 0 auto 3rem;
+    padding: 1.8rem;
+    background-color: var(--blanco);
+    border: 1px solid var(--gris-borde);
+    border-radius: 18px;
+}
+
+#coleccion article > h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--tinta);
+    text-align: left;
+    margin: 0 0 1rem;
+}
+
+#coleccion article > img {
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: 12px;
+    background-color: var(--gris-claro);
+}
+
+#coleccion article section {
+    margin-top: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#coleccion article section h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--negro);
+    margin: 0;
+}
+
+#coleccion article section h2::after {
+    content: none;
+}
+
+#coleccion article section p {
+    font-size: 0.95rem;
+    color: var(--gris-texto);
+    line-height: 1.7;
+}
+
+#coleccion article {
+    display: none;
+}
+
+#coleccion article.producto-activo {
+    display: block;
+}
+
+/* ==========================================================
+   MEDIA QUERIES
+   ========================================================== */
+
+@media (max-width: 768px) {
+    .grilla-productos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .grilla-productos img {
+        height: 200px;
+    }
+
+    #beneficios-mini {
+        border-radius: 18px;
+        gap: 0.8rem;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .grilla-productos {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .grilla-productos img {
+        height: auto;
+        max-width: 100%;
+        object-fit: cover;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
