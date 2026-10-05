@@ -13,3 +13,4 @@ predicciones
 12-voy a estandarizar el header en todo mi sitio web tomando como base la estructura HTMl y CSS de mi index.html replicando ese header en carrito.html, login.html y ajustar las reclas de CSS responsive (media queries) para que se visualice exactamente igual de forma adaptativa en todas las paginas , utilizando unicamente HTML Y CSS puro
 13-Voy a agregar las reglas CSS para la validacion nativa visual de formularios en todas las paginas que haya formularios.
 14-vvoy a reorganizar y limpiar  codigo  sin agregar funcionalidades nuevas .
+15-voy a empezar a aplicar JavaScript en el proyecto. Quiero pasar los productos que hoy están hardcodeados en el HTML a un archivo data/productos.json para cargarlos dinámicamente con js/app.js mediante fetch y document.querySelector al cargar el DOM, manteniendo todas mis clases CSS intactas.
