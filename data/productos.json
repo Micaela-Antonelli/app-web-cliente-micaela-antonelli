@@ -1,0 +1,89 @@
+{
+  "productos": [
+    {
+      "id": "calza-power-flex",
+      "nombre": "Calza Power Flex",
+      "precio": 18500,
+      "precioAnterior": 21000,
+      "categoria": "calzas",
+      "imagen": "https://dcdn-us.mitiendanube.com/stores/001/437/082/products/12-3-e601666a9203d24f3917858479017936-640-0.webp",
+      "alt": "Calza deportiva femenina Power Flex",
+      "oferta": true
+    },
+    {
+      "id": "top-training-supreme",
+      "nombre": "Top Training Supreme",
+      "precio": 14900,
+      "precioAnterior": 16500,
+      "categoria": "tops",
+      "imagen": "https://dcdn-us.mitiendanube.com/stores/001/437/082/products/7-1-a9b23f0b6805a4d71617858459848276-1024-1024.webp",
+      "alt": "Top deportivo femenino Training Supreme",
+      "oferta": true
+    },
+    {
+      "id": "conjunto-run-flex",
+      "nombre": "Conjunto Run Flex",
+      "precio": 39900,
+      "categoria": "zapatillas",
+      "imagen": "https://dcdn-us.mitiendanube.com/stores/001/437/082/products/3-1-fdb9260892e7a173a317858436227626-1024-1024.webp",
+      "alt": "Zapatillas para entrenamiento femenino Run Flex",
+      "oferta": false
+    },
+    {
+      "id": "remera-performance",
+      "nombre": "Remera Performance",
+      "precio": 13200,
+      "categoria": "remeras",
+      "imagen": "https://dcdn-us.mitiendanube.com/stores/001/437/082/products/5-23-f31000e193709dc10717899927379600-1024-1024.webp",
+      "alt": "Remera Performance",
+      "oferta": false
+    },
+    {
+      "id": "legging-studio-fit",
+      "nombre": "Legging Studio Fit",
+      "precio": 21900,
+      "categoria": "calzas",
+      "imagen": "https://dcdn-us.mitiendanube.com/stores/001/437/082/products/290-f50d543e2134eb0d9317721252309775-1024-1024.webp",
+      "alt": "Legging Studio Fit",
+      "oferta": false
+    },
+    {
+      "id": "pollera-active-motion",
+      "nombre": "Pollera Active Motion",
+      "precio": 12800,
+      "precioAnterior": 16000,
+      "categoria": "shorts",
+      "imagen": "https://dcdn-us.mitiendanube.com/stores/001/437/082/products/10-1-8e7d3845acaa69ad9c17858471082226-1024-1024.webp",
+      "alt": "Short Active Motion",
+      "oferta": true
+    },
+    {
+      "id": "top-sweat-pro",
+      "nombre": "Top Sweat Pro",
+      "precio": 7200,
+      "precioAnterior": 9500,
+      "categoria": "tops",
+      "imagen": "https://dcdn-us.mitiendanube.com/stores/001/437/082/products/14-6-de0187bc6a070a9df217858491163156-480-0.webp",
+      "alt": "Brazalete Sweat Pro",
+      "oferta": true
+    },
+    {
+      "id": "conjunto-dikka",
+      "nombre": "Conjunto Dikka",
+      "precio": 32000,
+      "categoria": "conjuntos",
+      "imagen": "https://dcdn-us.mitiendanube.com/stores/001/437/082/products/243-0b92e5b80a1b14067717866254933901-1024-1024.webp",
+      "alt": "Conjunto Dikka",
+      "oferta": false
+    },
+    {
+      "id": "performance-runner",
+      "nombre": "Performance Runner",
+      "precio": 44500,
+      "categoria": "zapatillas",
+      "imagen": "https://acdn-us.mitiendanube.com/stores/005/641/912/products/6-419129f7dc12c91d6517626186715062-1024-1024.webp",
+      "alt": "Performance Runner",
+      "oferta": false
+    }
+  ]
+}
