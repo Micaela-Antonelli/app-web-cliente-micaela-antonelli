@@ -63,3 +63,7 @@ a {
     white-space: nowrap;
     border: 0;
 }
+
+.d-none {
+    display: none !important;
+}
