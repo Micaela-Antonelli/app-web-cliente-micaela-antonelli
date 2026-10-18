@@ -8,6 +8,7 @@
       "categoria": "calzas",
       "imagen": "https://dcdn-us.mitiendanube.com/stores/001/437/082/products/12-3-e601666a9203d24f3917858479017936-640-0.webp",
       "alt": "Calza deportiva femenina Power Flex",
+      "descripcion": "La Power Flex combina compresión ligera con tejido de secado rápido. Te da soporte en cada sentadilla y total libertad de movimiento para correr, saltar o entrenar la fuerza. Cintura alta con ajuste cómodo que no marca bajo la ropa.",
       "oferta": true
     },
     {
@@ -18,15 +19,17 @@
       "categoria": "tops",
       "imagen": "https://dcdn-us.mitiendanube.com/stores/001/437/082/products/7-1-a9b23f0b6805a4d71617858459848276-1024-1024.webp",
       "alt": "Top deportivo femenino Training Supreme",
+      "descripcion": "Top deportivo con sujeción media, ideal para entrenamientos de alta intensidad. Su tejido transpirable mantiene la frescura y el soporte en cada movimiento.",
       "oferta": true
     },
     {
       "id": "conjunto-run-flex",
       "nombre": "Conjunto Run Flex",
       "precio": 39900,
-      "categoria": "zapatillas",
+      "categoria": "conjuntos",
       "imagen": "https://dcdn-us.mitiendanube.com/stores/001/437/082/products/3-1-fdb9260892e7a173a317858436227626-1024-1024.webp",
-      "alt": "Zapatillas para entrenamiento femenino Run Flex",
+      "alt": "Conjunto deportivo femenino Run Flex",
+      "descripcion": "Conjunto de entrenamiento con flexibilidad total y diseño moderno. Pensado para correr con comodidad y estilo, combinando tops y calzas de alto rendimiento.",
       "oferta": false
     },
     {
@@ -36,6 +39,7 @@
       "categoria": "remeras",
       "imagen": "https://dcdn-us.mitiendanube.com/stores/001/437/082/products/5-23-f31000e193709dc10717899927379600-1024-1024.webp",
       "alt": "Remera Performance",
+      "descripcion": "Remera liviana de secado rápido con corte holgado. Perfecta para entrenamientos de fuerza, running o uso diario con un look deportivo y versátil.",
       "oferta": false
     },
     {
@@ -45,6 +49,7 @@
       "categoria": "calzas",
       "imagen": "https://dcdn-us.mitiendanube.com/stores/001/437/082/products/290-f50d543e2134eb0d9317721252309775-1024-1024.webp",
       "alt": "Legging Studio Fit",
+      "descripcion": "Legging de tiro alto con compresión media que moldea y sostiene. Su tejido de alta densidad acompaña cada movimiento, ideal para studio, yoga y pilates.",
       "oferta": false
     },
     {
@@ -55,6 +60,7 @@
       "categoria": "shorts",
       "imagen": "https://dcdn-us.mitiendanube.com/stores/001/437/082/products/10-1-8e7d3845acaa69ad9c17858471082226-1024-1024.webp",
       "alt": "Short Active Motion",
+      "descripcion": "Pollera deportiva con shorts integrados que brinda total libertad de movimiento. Fresca, versátil y cómoda para entrenar o para looks urbanos.",
       "oferta": true
     },
     {
@@ -65,6 +71,7 @@
       "categoria": "tops",
       "imagen": "https://dcdn-us.mitiendanube.com/stores/001/437/082/products/14-6-de0187bc6a070a9df217858491163156-480-0.webp",
       "alt": "Brazalete Sweat Pro",
+      "descripcion": "Top con tazas y sujeción firme para entrenamientos exigentes. Su material aboga la humedad y aporta un ajuste cómodo y seguro.",
       "oferta": true
     },
     {
@@ -74,6 +81,7 @@
       "categoria": "conjuntos",
       "imagen": "https://dcdn-us.mitiendanube.com/stores/001/437/082/products/243-0b92e5b80a1b14067717866254933901-1024-1024.webp",
       "alt": "Conjunto Dikka",
+      "descripcion": "Conjunto premium que combina top y calza con estampa exclusiva. Tejido de alta calidad con compresión y estilo para destacar en el gimnasio.",
       "oferta": false
     },
     {
@@ -83,6 +91,7 @@
       "categoria": "zapatillas",
       "imagen": "https://acdn-us.mitiendanube.com/stores/005/641/912/products/6-419129f7dc12c91d6517626186715062-1024-1024.webp",
       "alt": "Performance Runner",
+      "descripcion": "Conjunto runner con tecnología de compresión y secado rápido. Diseñado para darlo todo en cada carrera con soporte, frescura y estilo.",
       "oferta": false
     }
   ]
