@@ -151,6 +151,7 @@
         </nav>
     </footer>
 
+    <script src="api.js"></script>
     <script>
         (function () {
             var productos = [];
@@ -204,10 +205,9 @@
 
             window.addEventListener('hashchange', cargarProducto);
 
-            fetch('data/productos.json')
-                .then(function (respuesta) { return respuesta.json(); })
+            obtenerProductos()
                 .then(function (datos) {
-                    productos = datos.productos;
+                    productos = datos;
                     cargarProducto();
                 })
                 .catch(function (error) {

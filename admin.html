@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrar productos - PuntoFit</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #form-producto { display: grid; gap: 0.75rem; margin: 1.5rem 0 2rem; }
+        #form-producto button { justify-self: start; }
+
+        #lista-productos { list-style: none; }
+        #lista-productos li {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--gris-borde);
+        }
+        #lista-productos button {
+            font-size: 0.8rem;
+            padding: 0.35rem 0.9rem;
+            background-color: transparent;
+            color: var(--tinta);
+            border: 1px solid var(--gris-borde);
+        }
+        #lista-productos button:first-of-type { margin-left: auto; }
+        #lista-productos button:hover { background-color: var(--marino-suave); }
+        #lista-productos button:last-of-type { color: #c0392b; border-color: #e6b0aa; }
+        #lista-productos button:last-of-type:hover { background-color: #fdecea; }
+    </style>
+</head>
+<body>
+    <main style="max-width: 700px; margin: 2rem auto; padding: 0 1rem;">
+        <h1>Administrar productos</h1>
+
+        <form id="form-producto">
+            <label>Nombre <input id="nombre" required></label>
+            <label>Precio <input id="precio" type="number" required></label>
+            <label>Categoría <input id="categoria" required></label>
+            <label>URL de la imagen <input id="imagen"></label>
+            <button type="submit">Crear producto</button>
+        </form>
+
+        <ul id="lista-productos"></ul>
+    </main>
+
+    <script src="api.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
