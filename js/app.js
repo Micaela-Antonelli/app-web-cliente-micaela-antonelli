@@ -128,38 +128,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const buscador = document.getElementById('buscar');
   const contenedorBuscador = document.querySelector('.buscador-contenedor');
-  const dropdown = crearDropdownResultados();
-  contenedorBuscador.appendChild(dropdown);
+  
+  if (buscador && contenedorBuscador) {
+    const dropdown = crearDropdownResultados();
+    contenedorBuscador.appendChild(dropdown);
 
-  buscador.addEventListener('input', () => {
-    const valor = buscador.value.trim().toLowerCase();
+    buscador.addEventListener('input', () => {
+      const valor = buscador.value.trim().toLowerCase();
 
-    if (valor.length < 3) {
-      ocultarDropdown(dropdown);
-      return;
-    }
+      if (valor.length < 3) {
+        ocultarDropdown(dropdown);
+        return;
+      }
 
-    const coincidencias = todosLosProductos.filter((producto) =>
-      producto.nombre.toLowerCase().includes(valor) ||
-      producto.categoria.toLowerCase().includes(valor)
-    );
+      const coincidencias = todosLosProductos.filter((producto) =>
+        producto.nombre.toLowerCase().includes(valor) ||
+        producto.categoria.toLowerCase().includes(valor)
+      );
 
-    renderizarResultados(coincidencias, dropdown);
-    mostrarDropdown(dropdown);
-  });
+      renderizarResultados(coincidencias, dropdown);
+      mostrarDropdown(dropdown);
+    });
 
-  document.addEventListener('click', (evento) => {
-    if (!contenedorBuscador.contains(evento.target)) {
-      ocultarDropdown(dropdown);
-    }
-  });
+    document.addEventListener('click', (evento) => {
+      if (!contenedorBuscador.contains(evento.target)) {
+        ocultarDropdown(dropdown);
+      }
+    });
 
-  buscador.addEventListener('keydown', (evento) => {
-    if (evento.key === 'Escape') {
-      ocultarDropdown(dropdown);
-      buscador.blur();
-    }
-  });
+    buscador.addEventListener('keydown', (evento) => {
+      if (evento.key === 'Escape') {
+        ocultarDropdown(dropdown);
+        buscador.blur();
+      }
+    });
+  }
 
   const renderizarSecciones = () => {
     const productosPorId = {};
@@ -195,7 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const coincidencias = todosLosProductos.filter(
-      (producto) => producto.categoria.toLowerCase() === categoria.toLowerCase()
+      (producto) => producto.categoria && producto.categoria.toLowerCase() === categoria.toLowerCase()
     );
 
     if (coincidencias.length === 0) {
@@ -233,13 +236,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('hashchange', aplicarFiltroDesdeHash);
 
-  fetch('data/productos.json')
-    .then((respuesta) => respuesta.json())
-    .then((datos) => {
-      todosLosProductos = datos.productos;
-      aplicarFiltroDesdeHash();
-    })
-    .catch((error) => {
-      console.error('Error al cargar los productos:', error);
-    });
+  if (typeof obtenerProductos === 'function') {
+    obtenerProductos()
+      .then((productos) => {
+        todosLosProductos = productos;
+        aplicarFiltroDesdeHash();
+      })
+      .catch((error) => {
+        console.error('Error al cargar los productos:', error);
+      });
+  } else {
+    console.error('obtenerProductos no está definido');
+  }
 });
