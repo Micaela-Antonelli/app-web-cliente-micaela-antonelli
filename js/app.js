@@ -1,3 +1,39 @@
+const CLAVE_CARRITO = 'carrito_puntofit';
+
+const agregarAlCarrito = (producto) => {
+  let carrito = [];
+
+  try {
+    carrito = JSON.parse(localStorage.getItem(CLAVE_CARRITO)) || [];
+  } catch (error) {
+    carrito = [];
+  }
+
+  if (!Array.isArray(carrito)) {
+    carrito = [];
+  }
+
+  const existente = carrito.find((item) => item.id === producto.id);
+
+  if (existente) {
+    existente.cantidad = (Number(existente.cantidad) || 0) + 1;
+  } else {
+    carrito.push({
+      id: producto.id,
+      nombre: producto.nombre,
+      precio: producto.precio,
+      imagen: producto.imagen,
+      alt: producto.alt,
+      cantidad: 1
+    });
+  }
+
+  localStorage.setItem(CLAVE_CARRITO, JSON.stringify(carrito));
+  return carrito;
+};
+
+window.agregarAlCarrito = agregarAlCarrito;
+
 document.addEventListener('DOMContentLoaded', () => {
   const secciones = {
     catalogo: [
@@ -48,19 +84,30 @@ document.addEventListener('DOMContentLoaded', () => {
     article.appendChild(enlace);
     article.appendChild(h3);
 
+    const precios = document.createElement('div');
+    precios.className = 'precio-producto';
+
     if (producto.oferta && producto.precioAnterior) {
       const del = document.createElement('del');
       del.textContent = formatearPrecio(producto.precioAnterior);
-      article.appendChild(del);
+      precios.appendChild(del);
     }
 
     const strong = document.createElement('strong');
     strong.textContent = formatearPrecio(producto.precio);
-    article.appendChild(strong);
+    precios.appendChild(strong);
+    article.appendChild(precios);
 
     const boton = document.createElement('button');
     boton.type = 'button';
     boton.textContent = 'Agregar al carrito';
+    boton.addEventListener('click', () => {
+      agregarAlCarrito(producto);
+      boton.textContent = '¡Agregado!';
+      window.setTimeout(() => {
+        boton.textContent = 'Agregar al carrito';
+      }, 1200);
+    });
     article.appendChild(boton);
 
     return article;
