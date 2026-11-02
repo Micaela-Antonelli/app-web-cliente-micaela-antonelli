@@ -16,3 +16,4 @@ predicciones
 15-voy a empezar a aplicar JavaScript en el proyecto. Quiero pasar los productos que hoy están hardcodeados en el HTML a un archivo data/productos.json para cargarlos dinámicamente con js/app.js mediante fetch y document.querySelector al cargar el DOM, manteniendo todas mis clases CSS intactas.
 16-voy a implementar la carga dinamica del catalogo desde productos.json usando fetch() y un buscador interactivo que filtra los productos con .filter() al escribir mas de 2 caracteres, mostrando los resultados en tiempo real dentro de un menu desplegable flotante 
 17-voy a crear la seccion de administracion para poder agregar, editar o eliminar productos desde mi web.
+18- Vamos a hacer funcional el carrito utilizando Local Storage.

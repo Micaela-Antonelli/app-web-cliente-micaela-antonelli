@@ -156,12 +156,21 @@
     </footer>
 
     <script src="api.js"></script>
+    <script src="js/app.js"></script>
     <script>
         (function () {
             var productos = [];
+            var productoActual = null;
 
             var seccionDetalle = document.getElementById('detalle-producto');
             var seccionError = document.getElementById('producto-error');
+            var botonAgregar = document.querySelector('.btn-agregar');
+
+            botonAgregar.addEventListener('click', function () {
+                if (productoActual) {
+                    window.agregarAlCarrito(productoActual);
+                }
+            });
 
             function formatearPrecio(precio) {
                 return '$' + precio.toLocaleString('es-AR');
@@ -172,11 +181,13 @@
                 var producto = productos.find(function (p) { return p.id === idHash; });
 
                 if (!producto) {
+                    productoActual = null;
                     seccionDetalle.classList.remove('producto-activo');
                     seccionError.classList.remove('d-none');
                     return;
                 }
 
+                productoActual = producto;
                 seccionError.classList.add('d-none');
                 seccionDetalle.classList.add('producto-activo');
 

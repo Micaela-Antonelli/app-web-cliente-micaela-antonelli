@@ -139,14 +139,14 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
-    justify-items: center;
-    justify-content: center;
+    align-items: stretch;
 }
 
 .grilla-productos article {
     display: flex;
     flex-direction: column;
     gap: 0.6rem;
+    height: 100%;
     padding: 1rem;
     border: 1px solid var(--gris-borde);
     border-radius: 18px;
@@ -170,7 +170,13 @@
 .grilla-productos h3 {
     font-size: 1.05rem;
     font-weight: 600;
+    line-height: 1.35;
     margin-top: 0.4rem;
+    min-height: 2.84rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .grilla-productos h3 a {
@@ -189,12 +195,21 @@
     flex-grow: 1;
 }
 
+.grilla-productos .precio-producto {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 3.5rem;
+}
+
 .grilla-productos del {
+    display: block;
     color: #999088;
     font-size: 0.85rem;
 }
 
 .grilla-productos strong {
+    display: block;
     font-size: 1.15rem;
     font-weight: 700;
     color: var(--negro);
@@ -202,7 +217,7 @@
 
 .grilla-productos button {
     width: 100%;
-    margin-top: 0.6rem;
+    margin-top: auto;
     text-align: center;
 }
 
