@@ -231,63 +231,199 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
-  const filtrarPorCategoria = (categoria) => {
+  const categoriasValidas = ['tops', 'shorts', 'conjuntos', 'calzas', 'remeras', 'joggers', 'zapatillas'];
+
+  const capitalizar = (texto) => texto.charAt(0).toUpperCase() + texto.slice(1);
+
+  const crearOpcionesCategoria = () => {
+    const contenedor = document.getElementById('filtros-categorias');
+    if (!contenedor) return;
+
+    const categorias = new Set(categoriasValidas);
+    todosLosProductos.forEach((producto) => {
+      if (producto.categoria) {
+        categorias.add(producto.categoria.toLowerCase());
+      }
+    });
+
+    contenedor.innerHTML = '';
+    categorias.forEach((categoria) => {
+      const label = document.createElement('label');
+      const input = document.createElement('input');
+      input.type = 'checkbox';
+      input.name = 'categoria';
+      input.value = categoria;
+
+      const texto = document.createElement('span');
+      texto.textContent = capitalizar(categoria);
+
+      label.appendChild(input);
+      label.appendChild(texto);
+      contenedor.appendChild(label);
+    });
+  };
+
+  const obtenerFiltros = () => {
+    const categorias = Array.from(
+      document.querySelectorAll('#filtros-categorias input[type="checkbox"]:checked'),
+      (input) => input.value
+    );
+
+    const precioMinInput = document.getElementById('precio-min');
+    const precioMaxInput = document.getElementById('precio-max');
+
+    return {
+      categorias,
+      precioMin: precioMinInput && precioMinInput.value !== '' ? Number(precioMinInput.value) : null,
+      precioMax: precioMaxInput && precioMaxInput.value !== '' ? Number(precioMaxInput.value) : null
+    };
+  };
+
+  const limpiarFiltros = () => {
+    document.querySelectorAll('#filtros-categorias input[type="checkbox"]').forEach((input) => {
+      input.checked = false;
+    });
+
+    const precioMinInput = document.getElementById('precio-min');
+    const precioMaxInput = document.getElementById('precio-max');
+    if (precioMinInput) precioMinInput.value = '';
+    if (precioMaxInput) precioMaxInput.value = '';
+  };
+
+  const aplicarFiltros = () => {
     const contenedorCatalogo = document.querySelector('.grilla-productos[data-seccion="catalogo"]');
-    if (!contenedorCatalogo) return;
+    if (!contenedorCatalogo || todosLosProductos.length === 0) return;
+
+    const filtros = obtenerFiltros();
+    const resumen = document.getElementById('filtros-resumen');
+
+    if (
+      filtros.precioMin !== null &&
+      filtros.precioMax !== null &&
+      filtros.precioMin > filtros.precioMax
+    ) {
+      if (resumen) resumen.textContent = 'El precio mínimo no puede ser mayor que el máximo.';
+      return;
+    }
+
+    const hayFiltros =
+      filtros.categorias.length > 0 || filtros.precioMin !== null || filtros.precioMax !== null;
 
     const seccionOfertas = document.getElementById('ofertas');
     const seccionMasVendidos = document.getElementById('mas-vendidos');
+
+    if (!hayFiltros) {
+      if (seccionOfertas) seccionOfertas.classList.remove('d-none');
+      if (seccionMasVendidos) seccionMasVendidos.classList.remove('d-none');
+      if (resumen) resumen.textContent = '';
+      renderizarSecciones();
+      return;
+    }
+
     if (seccionOfertas) seccionOfertas.classList.add('d-none');
     if (seccionMasVendidos) seccionMasVendidos.classList.add('d-none');
+
+    const coincidencias = todosLosProductos.filter((producto) => {
+      const categoria = (producto.categoria || '').toLowerCase();
+      const precio = Number(producto.precio) || 0;
+      const cumpleCategoria =
+        filtros.categorias.length === 0 || filtros.categorias.includes(categoria);
+      const cumpleMinimo = filtros.precioMin === null || precio >= filtros.precioMin;
+      const cumpleMaximo = filtros.precioMax === null || precio <= filtros.precioMax;
+      return cumpleCategoria && cumpleMinimo && cumpleMaximo;
+    });
 
     document.querySelectorAll('.grilla-productos').forEach((grilla) => {
       grilla.innerHTML = '';
     });
 
-    const coincidencias = todosLosProductos.filter(
-      (producto) => producto.categoria && producto.categoria.toLowerCase() === categoria.toLowerCase()
-    );
-
     if (coincidencias.length === 0) {
       const mensaje = document.createElement('p');
       mensaje.className = 'intro';
-      mensaje.textContent = `Sin resultados en la categoría "${categoria}".`;
+      mensaje.textContent = 'No encontramos productos con esos filtros.';
       contenedorCatalogo.appendChild(mensaje);
-      return;
+    } else {
+      coincidencias.forEach((producto) => {
+        contenedorCatalogo.appendChild(crearTarjeta(producto));
+      });
     }
 
-    coincidencias.forEach((producto) => {
-      contenedorCatalogo.appendChild(crearTarjeta(producto));
-    });
+    if (resumen) {
+      resumen.textContent =
+        coincidencias.length === 1
+          ? '1 producto encontrado con los filtros aplicados.'
+          : `${coincidencias.length} productos encontrados con los filtros aplicados.`;
+    }
   };
 
-  const categoriasValidas = ['tops', 'shorts', 'conjuntos', 'calzas', 'remeras', 'joggers', 'zapatillas'];
-
-  const aplicarFiltroDesdeHash = () => {
+  const sincronizarFiltrosConHash = () => {
     if (todosLosProductos.length === 0) return;
     if (!document.querySelector('.grilla-productos')) return;
 
     const hash = window.location.hash.replace('#', '').toLowerCase();
+    limpiarFiltros();
 
     if (hash && categoriasValidas.includes(hash)) {
-      filtrarPorCategoria(hash);
-      return;
+      const input = Array.from(
+        document.querySelectorAll('#filtros-categorias input[type="checkbox"]'),
+        (checkbox) => checkbox
+      ).find((checkbox) => checkbox.value === hash);
+
+      if (input) input.checked = true;
     }
 
-    const seccionOfertas = document.getElementById('ofertas');
-    const seccionMasVendidos = document.getElementById('mas-vendidos');
-    if (seccionOfertas) seccionOfertas.classList.remove('d-none');
-    if (seccionMasVendidos) seccionMasVendidos.classList.remove('d-none');
-    renderizarSecciones();
+    aplicarFiltros();
   };
 
-  window.addEventListener('hashchange', aplicarFiltroDesdeHash);
+  const formFiltros = document.getElementById('form-filtros');
+  if (formFiltros) {
+    let temporizadorPrecios = null;
+
+    const aplicarFiltrosConRetraso = () => {
+      window.clearTimeout(temporizadorPrecios);
+      temporizadorPrecios = window.setTimeout(aplicarFiltros, 300);
+    };
+
+    formFiltros.addEventListener('submit', (evento) => {
+      evento.preventDefault();
+      aplicarFiltros();
+    });
+
+    formFiltros.addEventListener('reset', () => {
+      window.clearTimeout(temporizadorPrecios);
+      window.setTimeout(() => {
+        if (window.location.hash) {
+          history.replaceState(null, '', window.location.pathname + window.location.search);
+        }
+        aplicarFiltros();
+      }, 0);
+    });
+
+    const contenedorCategorias = document.getElementById('filtros-categorias');
+    if (contenedorCategorias) {
+      contenedorCategorias.addEventListener('change', aplicarFiltros);
+    }
+
+    ['precio-min', 'precio-max'].forEach((id) => {
+      const input = document.getElementById(id);
+      if (!input) return;
+
+      input.addEventListener('input', aplicarFiltrosConRetraso);
+      input.addEventListener('change', () => {
+        window.clearTimeout(temporizadorPrecios);
+        aplicarFiltros();
+      });
+    });
+  }
+
+  window.addEventListener('hashchange', sincronizarFiltrosConHash);
 
   if (typeof obtenerProductos === 'function') {
     obtenerProductos()
       .then((productos) => {
         todosLosProductos = productos;
-        aplicarFiltroDesdeHash();
+        crearOpcionesCategoria();
+        sincronizarFiltrosConHash();
       })
       .catch((error) => {
         console.error('Error al cargar los productos:', error);
