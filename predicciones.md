@@ -17,3 +17,5 @@ predicciones
 16-voy a implementar la carga dinamica del catalogo desde productos.json usando fetch() y un buscador interactivo que filtra los productos con .filter() al escribir mas de 2 caracteres, mostrando los resultados en tiempo real dentro de un menu desplegable flotante 
 17-voy a crear la seccion de administracion para poder agregar, editar o eliminar productos desde mi web.
 18- Vamos a hacer funcional el carrito utilizando Local Storage.
+19- Sumamos un panel de filtros por catoria y rango de precios para complementar el buscador que ya tengo.
+
