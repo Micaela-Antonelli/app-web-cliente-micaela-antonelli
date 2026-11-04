@@ -212,6 +212,9 @@ button:active {
 }
 
 .recaptcha-placeholder {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 0.5rem 1.2rem;
@@ -219,6 +222,18 @@ button:active {
     font-size: 0.85rem;
     color: #999;
     cursor: pointer;
+}
+
+.recaptcha-placeholder input {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--pf-ok);
+    cursor: pointer;
+}
+
+.recaptcha-placeholder.recaptcha-ok {
+    border-color: var(--pf-ok);
+    color: var(--pf-ok);
 }
 
 /* ==========================================================
