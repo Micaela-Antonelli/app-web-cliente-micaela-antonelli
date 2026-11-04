@@ -21,3 +21,4 @@ predicciones
 20- Usuario/sesion queda funcional visualmente.
 21- Modificar el boton editar de admin.html por la opcion de editar todos los campos .
 22-Los datos de sucursales.html llegan de Supabase
+23- Voy a hacer funcional la seccion contacto.html
