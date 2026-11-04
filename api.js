@@ -1,5 +1,6 @@
 // 1. Configuración (una sola vez)
 const API_PRODUCTOS = 'https://wjouzmxfnelynpwvdjxc.supabase.co/rest/v1/Products';
+const API_SUCURSALES = 'https://wjouzmxfnelynpwvdjxc.supabase.co/rest/v1/Sucursales';
 const KEY = 'sb_publishable_XaVveBwSlfV0jT2kCFi8Zw_j5O2KnS1';
 
 const cabeceras = {
@@ -9,9 +10,9 @@ const cabeceras = {
   Prefer: 'return=representation'
 };
 
-// 2. Una sola función que hace el fetch para cualquier verbo
-const pedirApi = async (metodo, filtro, datos) => {
-  const respuesta = await fetch(API_PRODUCTOS + filtro, {
+// 2. Una sola función que hace el fetch para cualquier verbo y tabla
+const pedirUrl = async (url, metodo, filtro, datos) => {
+  const respuesta = await fetch(url + filtro, {
     method: metodo,
     headers: cabeceras,
     body: JSON.stringify(datos)
@@ -24,6 +25,8 @@ const pedirApi = async (metodo, filtro, datos) => {
 
   return respuesta.json();
 };
+
+const pedirApi = (metodo, filtro, datos) => pedirUrl(API_PRODUCTOS, metodo, filtro, datos);
 
 // 3. Los cuatro verbos
 const obtenerFilas = () => pedirApi('GET', '?order=id');
@@ -48,3 +51,5 @@ const obtenerProductos = async () => {
   const filas = await obtenerFilas();
   return filas.map(traducirProducto);
 };
+
+const obtenerSucursales = () => pedirUrl(API_SUCURSALES, 'GET', '?order=id');
