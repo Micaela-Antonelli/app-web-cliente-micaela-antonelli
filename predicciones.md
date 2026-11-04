@@ -18,4 +18,5 @@ predicciones
 17-voy a crear la seccion de administracion para poder agregar, editar o eliminar productos desde mi web.
 18- Vamos a hacer funcional el carrito utilizando Local Storage.
 19- Sumamos un panel de filtros por catoria y rango de precios para complementar el buscador que ya tengo.
+20- Usuario/sesion queda funcional visualmente.
 
