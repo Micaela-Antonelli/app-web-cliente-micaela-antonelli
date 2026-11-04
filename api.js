@@ -28,7 +28,7 @@ const pedirApi = async (metodo, filtro, datos) => {
 // 3. Los cuatro verbos
 const obtenerFilas = () => pedirApi('GET', '?order=id');
 const crearProducto = (producto) => pedirApi('POST', '', producto);
-const reemplazarProducto = (producto) => pedirApi('PUT', '?id=eq.' + producto.id, producto);
+const actualizarProducto = (producto) => pedirApi('PATCH', '?id=eq.' + producto.id, producto);
 const borrarProducto = (id) => pedirApi('DELETE', '?id=eq.' + id);
 
 // 4. La tienda usa nombres en español: traducimos cada fila de la tabla
