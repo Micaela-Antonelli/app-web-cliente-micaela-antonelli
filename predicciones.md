@@ -20,3 +20,4 @@ predicciones
 19- Sumamos un panel de filtros por catoria y rango de precios para complementar el buscador que ya tengo.
 20- Usuario/sesion queda funcional visualmente.
 21- Modificar el boton editar de admin.html por la opcion de editar todos los campos .
+22-Los datos de sucursales.html llegan de Supabase
