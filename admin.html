@@ -38,8 +38,13 @@
             <label>Nombre <input id="nombre" required></label>
             <label>Precio <input id="precio" type="number" required></label>
             <label>Categoría <input id="categoria" required></label>
+            <label>Precio anterior <input id="precio-anterior" type="number"></label>
             <label>URL de la imagen <input id="imagen"></label>
-            <button type="submit">Crear producto</button>
+            <label>Texto alternativo de la imagen <input id="alt"></label>
+            <label>Descripción <textarea id="descripcion" rows="3"></textarea></label>
+            <label><input id="oferta" type="checkbox"> En oferta</label>
+            <button type="submit" id="boton-guardar">Crear producto</button>
+            <button type="button" id="boton-cancelar" hidden>Cancelar edición</button>
         </form>
 
         <ul id="lista-productos"></ul>
